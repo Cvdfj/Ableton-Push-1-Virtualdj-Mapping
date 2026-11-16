@@ -5,6 +5,11 @@ Copy the files to the respective directories of Virtualdj.
 Run Virtualdj.
 
 The pads control the sampler (64 full color), the sampler must be routed to Deck 4 (apply deck effects ON and Show effects ON),, so you can enjoy all the effects of the deck 4 on the sampler. 
+
+I recommend to enable the 6 effects on deck 4 and then you can browse it on the Push or on screen. 
+
+Important: Not every deck effect works over the samples!
+
 Note: What i do, i press rec on Deck 4 and i loop it. This way this is the master deck and i can control the pitch of the samples with the Push and scratch over. :D
 
 Only the lit buttons do something. :D
