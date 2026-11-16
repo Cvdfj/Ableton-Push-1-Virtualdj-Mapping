@@ -4,7 +4,7 @@ This is my custom mapping for the Push 1.
 1.- Copy the files to the respective directories of Virtualdj.
 2.- Run Virtualdj.
 
-The pads control the sampler (64 full color), the sampler must be routed to Deck 4, so you cna enjoy all the effects of the deck on the sampler.
+The pads control the sampler (64 full color), the sampler must be routed to Deck 4, so you cna enjoy all the effects of the deck on the sampler. 
 Only the Lit buttons do something. :D
 
 enc1 - fx1 on deck4
