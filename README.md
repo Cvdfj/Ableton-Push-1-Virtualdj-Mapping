@@ -4,7 +4,9 @@ This is my custom mapping for the Push 1.
 Copy the files to the respective directories of Virtualdj.
 Run Virtualdj.
 
-The pads control the sampler (64 full color), the sampler must be routed to Deck 4, so you can enjoy all the effects of the deck 4 on the sampler. 
+The pads control the sampler (64 full color), the sampler must be routed to Deck 4 (apply deck effects ON and Show effects ON),, so you can enjoy all the effects of the deck 4 on the sampler. 
+Note: What i do, i press rec on Deck 4 and i loop it. This way this is the master deck and i can control the pitch of the samples with the Push and scratch over. :D
+
 Only the lit buttons do something. :D
 
 
