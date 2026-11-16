@@ -1,0 +1,688 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+	  
+<device name="AbletonPUSH1"
+        author="Ground"
+        description="Ableton Push 1"
+        version="800"
+        type="MIDI"
+        vid="0x09E8"
+        pid="0x0015"
+        padColumns="8"
+        padRows="8"
+        padSides="1">
+		
+		<!-- cls -->
+		<init sendsysex="F0477F151C0000F7"/>
+		<init sendsysex="F0477F151D0000F7"/>
+		<init sendsysex="F0477F151E0000F7"/>
+		<init sendsysex="F0477F151F0000F7"/>
+		
+		<!-- bankchange buttons led -->
+		<init sendsysex="B03E01"/>
+		<init sendsysex="B03F01"/>
+		
+		<!-- lit delete button -->
+		<init sendsysex="B07601"/>
+		
+		<!-- lit add fx -->
+		<init sendsysex="B03401"/>
+		
+		<!-- lit shift key -->
+		<init sendsysex="B03101"/>
+		
+		<!-- lit cursor buttons -->
+		<init sendsysex="B02C01"/>
+		<init sendsysex="B02D01"/>
+		
+		<!-- lit enc lock -->
+		<init sendsysex="B00301"/>
+		
+		<!-- lit anim -->
+		<!-- <init sendsysex="B07301"/> -->
+
+
+
+
+<!--shift key -->
+<button cc="0x31" value="0x7F" off="0x00" name="SHIFT_KEY" channel="0"/>
+
+<!-- deck select -->
+<button cc="0x2C" name="DECK_A" channel="0"/>
+<button cc="0x2D" name="DECK_B" channel="0"/>
+
+<!-- deck pitch4-->
+<encoder cc="0x0F" zero="0" name="MASTER_BPM" channel="0"/>
+
+		
+<!-- fx change shift button effect -->
+<button cc="0x34" value="0x7F" off="0x00" name="FX_ADD_EFFECT" channel="0"/>	
+		
+		
+		
+<!--record arm (lock) -->
+<button cc="0x56" value="0x7F" off="0x00" name="SAMPLER_RECORD_ARM" channel="0"/>
+
+<led cc="0x56" value="0x01" zero="0x00" name="LED_SAMPLER_RECORD_ARM" channel="0"/>
+		
+		
+<!-- stop -->
+<button cc="0x55" value="0x7F" off="0x00" name="SAMPLER_STOP_ALL" channel="0"/>
+<led cc="0x55" value="0x01" name="LED_SAMPLER_STOP_ALL" channel="0"/>
+
+<!-- touchstrip note -->
+<slider note="0x0C" name="TOUCH_STRIP_TOUCH" min="0" max="0x7F" ghost="no" channel="0"/>
+
+<!-- touch strip slider-->
+<slider pitch="true" name="TOUCH_STRIP" channel="0"/>
+
+
+<!-- delete sample from the slot -->
+<button cc="0x76" value="0x7F" off="0x00" name="SAMPLER_REMOVE" channel="0"/>
+
+
+<!-- encoder most left -->
+<button note="0x0A" name="ENC_MOST_LEFT_TOUCH" channel="0"/>
+<encoder cc="0x0E" name="ENC_MOST_LEFT" channel="0"/>
+
+
+
+<!-- Row 1: pads 1–8 -->	
+<button note="0x5C" name="PAD_01" channel="0"/>
+<button note="0x5D" name="PAD_02" channel="0"/>
+<button note="0x5E" name="PAD_03" channel="0"/>
+<button note="0x5F" name="PAD_04" channel="0"/>
+<button note="0x60" name="PAD_05" channel="0"/>
+<button note="0x61" name="PAD_06" channel="0"/>
+<button note="0x62" name="PAD_07" channel="0"/>
+<button note="0x63" name="PAD_08" channel="0"/>
+
+<!-- Row 2: pads 9–16 -->
+<button note="0x54" name="PAD_09" channel="0"/>
+<button note="0x55" name="PAD_10" channel="0"/>
+<button note="0x56" name="PAD_11" channel="0"/>
+<button note="0x57" name="PAD_12" channel="0"/>
+<button note="0x58" name="PAD_13" channel="0"/>
+<button note="0x59" name="PAD_14" channel="0"/>
+<button note="0x5A" name="PAD_15" channel="0"/>
+<button note="0x5B" name="PAD_16" channel="0"/>
+
+<!-- Row 3: pads 17–24 -->
+<button note="0x4C" name="PAD_17" channel="0"/>
+<button note="0x4D" name="PAD_18" channel="0"/>
+<button note="0x4E" name="PAD_19" channel="0"/>
+<button note="0x4F" name="PAD_20" channel="0"/>
+<button note="0x50" name="PAD_21" channel="0"/>
+<button note="0x51" name="PAD_22" channel="0"/>
+<button note="0x52" name="PAD_23" channel="0"/>
+<button note="0x53" name="PAD_24" channel="0"/>
+
+<!-- Row 4: pads 25–32 -->
+<button note="0x44" name="PAD_25" channel="0"/>
+<button note="0x45" name="PAD_26" channel="0"/>
+<button note="0x46" name="PAD_27" channel="0"/>
+<button note="0x47" name="PAD_28" channel="0"/>
+<button note="0x48" name="PAD_29" channel="0"/>
+<button note="0x49" name="PAD_30" channel="0"/>
+<button note="0x4A" name="PAD_31" channel="0"/>
+<button note="0x4B" name="PAD_32" channel="0"/>
+
+<!-- Row 5: pads 33–40 -->
+<button note="0x3C" name="PAD_33" channel="0"/>
+<button note="0x3D" name="PAD_34" channel="0"/>
+<button note="0x3E" name="PAD_35" channel="0"/>
+<button note="0x3F" name="PAD_36" channel="0"/>
+<button note="0x40" name="PAD_37" channel="0"/>
+<button note="0x41" name="PAD_38" channel="0"/>
+<button note="0x42" name="PAD_39" channel="0"/>
+<button note="0x43" name="PAD_40" channel="0"/>
+
+<!-- Row 6: pads 41–48 -->
+<button note="0x34" name="PAD_41" channel="0"/>
+<button note="0x35" name="PAD_42" channel="0"/>
+<button note="0x36" name="PAD_43" channel="0"/>
+<button note="0x37" name="PAD_44" channel="0"/>
+<button note="0x38" name="PAD_45" channel="0"/>
+<button note="0x39" name="PAD_46" channel="0"/>
+<button note="0x3A" name="PAD_47" channel="0"/>
+<button note="0x3B" name="PAD_48" channel="0"/>
+
+<!-- Row 7: pads 49–56 -->
+<button note="0x2C" name="PAD_49" channel="0"/>
+<button note="0x2D" name="PAD_50" channel="0"/>
+<button note="0x2E" name="PAD_51" channel="0"/>
+<button note="0x2F" name="PAD_52" channel="0"/>
+<button note="0x30" name="PAD_53" channel="0"/>
+<button note="0x31" name="PAD_54" channel="0"/>
+<button note="0x32" name="PAD_55" channel="0"/>
+<button note="0x33" name="PAD_56" channel="0"/>
+
+<!-- Row 8: pads 57–64 -->
+<button note="0x24" name="PAD_57" channel="0"/>
+<button note="0x25" name="PAD_58" channel="0"/>
+<button note="0x26" name="PAD_59" channel="0"/>
+<button note="0x27" name="PAD_60" channel="0"/>
+<button note="0x28" name="PAD_61" channel="0"/>
+<button note="0x29" name="PAD_62" channel="0"/>
+<button note="0x2A" name="PAD_63" channel="0"/>
+<button note="0x2B" name="PAD_64" channel="0"/>
+	
+	
+	
+<color note="0x5C" name="LED_PAD_01" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x5D" name="LED_PAD_02" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x5E" name="LED_PAD_03" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x5F" name="LED_PAD_04" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x60" name="LED_PAD_05" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x61" name="LED_PAD_06" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x62" name="LED_PAD_07" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x63" name="LED_PAD_08" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+
+<color note="0x54" name="LED_PAD_09" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x55" name="LED_PAD_10" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x56" name="LED_PAD_11" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x57" name="LED_PAD_12" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x58" name="LED_PAD_13" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x59" name="LED_PAD_14" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x5A" name="LED_PAD_15" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x5B" name="LED_PAD_16" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+
+<color note="0x4C" name="LED_PAD_17" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x4D" name="LED_PAD_18" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x4E" name="LED_PAD_19" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x4F" name="LED_PAD_20" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x50" name="LED_PAD_21" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x51" name="LED_PAD_22" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x52" name="LED_PAD_23" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x53" name="LED_PAD_24" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+
+<color note="0x44" name="LED_PAD_25" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x45" name="LED_PAD_26" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x46" name="LED_PAD_27" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x47" name="LED_PAD_28" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x48" name="LED_PAD_29" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x49" name="LED_PAD_30" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x4A" name="LED_PAD_31" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x4B" name="LED_PAD_32" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+
+<color note="0x3C" name="LED_PAD_33" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x3D" name="LED_PAD_34" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x3E" name="LED_PAD_35" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x3F" name="LED_PAD_36" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x40" name="LED_PAD_37" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x41" name="LED_PAD_38" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x42" name="LED_PAD_39" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x43" name="LED_PAD_40" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+
+<color note="0x34" name="LED_PAD_41" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x35" name="LED_PAD_42" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x36" name="LED_PAD_43" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x37" name="LED_PAD_44" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x38" name="LED_PAD_45" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x39" name="LED_PAD_46" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x3A" name="LED_PAD_47" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x3B" name="LED_PAD_48" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+
+<color note="0x2C" name="LED_PAD_49" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x2D" name="LED_PAD_50" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x2E" name="LED_PAD_51" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x2F" name="LED_PAD_52" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x30" name="LED_PAD_53" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x31" name="LED_PAD_54" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x32" name="LED_PAD_55" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x33" name="LED_PAD_56" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+
+<color note="0x24" name="LED_PAD_57" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x25" name="LED_PAD_58" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x26" name="LED_PAD_59" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x27" name="LED_PAD_60" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x28" name="LED_PAD_61" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x29" name="LED_PAD_62" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x2A" name="LED_PAD_63" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+<color note="0x2B" name="LED_PAD_64" channel="0" values="0x00=black,0x05=red,0x09=orange,0x0D=yellow,0x15=green,0x21=cyan,0x2D=blue,0x31=purple,0x39=magenta,0x03=white"/>
+
+
+
+	
+	<button cc="0x70" name="TRACK" channel="0"/>
+    <button cc="0x6E" name="DEVICE" channel="0"/>
+	
+<!-- <text sysex="F0477F151B0012002020202020202020202020202020202020F7"
+      offset="8"
+      size="2"
+      encoding="ascii"
+      name="SAMPLE_TITLE"/> -->
+	  
+<text sysex="F0477F151B0012002020202020202020202020202020202020F7"
+      offset="8"
+      size="17"
+      encoding="ascii"
+      name="SAMPLE_NAME"/>
+	  
+	  
+
+	  
+<!-- lenght is the x in b00XX -->	  
+<!-- <text sysex="F0477F151B0012112020202020202020202020202020202020F7"
+      offset="8"
+      size="2"
+      encoding="ascii"
+      name="BANK_TITLE"/> -->
+	  
+<text sysex="F0477F151B0009112020202020202020F7"
+      offset="8"
+      size="8"
+      encoding="ascii"
+      name="BANK_VALUE"/>
+	
+	
+<!-- armed record -POS after the pair after the 009-->
+<!-- <text sysex="F0477F151B0009222020202020202020F7"
+      offset="8"
+      size="8"
+      encoding="ascii"
+      name="TEXT_SAMPLER_ARM_STATE_TITLE"/>	 -->
+
+<text sysex="F0477F151B00052220202020F7"
+      offset="8"
+      size="4"
+      encoding="ascii"
+      name="TEXT_SAMPLER_ARM_STATE"/>	
+
+
+ <text sysex="F0477F151B00042720202020F7"
+      offset="8"
+      size="3"
+      encoding="ascii"
+      name="EFX"/>
+
+	
+<!-- fxs slots -->  
+<text sysex="F0477F15180009002020202020202020F7"
+      offset="8"
+      size="8"
+      encoding="ascii"
+      name="DECK_FX1"/>
+	  
+<text sysex="F0477F15180009092020202020202020F7"
+      offset="8"
+      size="8"
+      encoding="ascii"
+      name="DECK_FX2"/>
+
+<text sysex="F0477F15180009112020202020202020F7"
+      offset="8"
+      size="8"
+      encoding="ascii"
+      name="DECK_FX3"/>
+
+<text sysex="F0477F151800091A2020202020202020F7"
+      offset="8"
+      size="8"
+      encoding="ascii"
+      name="DECK_FX4"/>
+
+<text sysex="F0477F15180009222020202020202020F7"
+      offset="8"
+      size="8"
+      encoding="ascii"
+      name="DECK_FX5"/>
+	  
+<text sysex="F0477F151800092bb020202020202020F7"
+      offset="8"
+      size="8"
+      encoding="ascii"
+      name="DECK_FX6"/>
+	  
+	  
+<!-- fx p1 p2 -->	  
+<text sysex="F0477F15190009002020202020202020F7"
+      offset="8"
+      size="8"
+      encoding="ascii"
+      name="FX1_VALUE"/>
+
+<text sysex="F0477F151A0009002020202020202020F7"
+      offset="8"
+      size="8"
+      encoding="ascii"
+      name="FX1_PARAM2"/>
+	  
+<text sysex="F0477F15190009092020202020202020F7"
+      offset="8"
+      size="8"
+      encoding="ascii"
+      name="FX2_VALUE"/>
+	  
+<text sysex="F0477F151A0009092020202020202020F7"
+      offset="8"
+      size="8"
+      encoding="ascii"
+      name="FX2_PARAM2"/> 
+	  
+<text sysex="F0477F15190009112020202020202020F7"
+      offset="8"
+      size="8"
+      encoding="ascii"
+      name="FX3_VALUE"/>
+	  
+<text sysex="F0477F151A0009112020202020202020F7"
+      offset="8"
+      size="8"
+      encoding="ascii"
+      name="FX3_PARAM2"/>
+	  
+<text sysex="F0477F151900091A2020202020202020F7"
+      offset="8"
+      size="8"
+      encoding="ascii"
+      name="FX4_VALUE"/>
+	  
+<text sysex="F0477F151A00091A2020202020202020F7"
+      offset="8"
+      size="8"
+      encoding="ascii"
+      name="FX4_PARAM2"/>
+	  
+<text sysex="F0477F15190009222020202020202020F7"
+      offset="8"
+      size="8"
+      encoding="ascii"
+      name="FX5_VALUE"/>
+	  
+<text sysex="F0477F151A0009222020202020202020F7"
+      offset="8"
+      size="8"
+      encoding="ascii"
+      name="FX5_PARAM2"/>
+	  
+<text sysex="F0477F151900092B2020202020202020F7"
+      offset="8"
+      size="8"
+      encoding="ascii"
+      name="FX6_VALUE"/>
+	  
+<text sysex="F0477F151A00092B2020202020202020F7"
+      offset="8"
+      size="8"
+      encoding="ascii"
+      name="FX6_PARAM2"/>
+	  
+	  
+	  
+<!-- sampler fx -->
+<!-- <text sysex="F0477F1518000C332020202020202020202020F7"
+      offset="8"
+      size="8"
+      encoding="ascii"
+      name="SAMPLER_FX_NAME_TITLE"/> -->
+	  
+
+<text sysex="F0477F15180009332020202020202020F7"
+      offset="8"
+      size="8"
+      encoding="ascii"
+      name="SAMPLER_FX_NAME"/>
+
+<text sysex="F0477F15190009332020202020202020F7"
+      offset="8"
+      size="8"
+      encoding="ascii"
+      name="SAMPLER_FX_VALUE"/>
+	  
+<text sysex="F0477F151A0009332020202020202020F7"
+      offset="8"
+      size="8"
+      encoding="ascii"
+      name="SAMPLER_FX_PARAM2"/>
+	  
+<!-- DECK4pitc vol -->
+<text sysex="F0477F151800093C2020202020202020F7"
+      offset="8"
+      size="8"
+      encoding="ascii"
+      name="DECK4_PITCH_TITLE"/>
+	  
+	  
+<text sysex="F0477F151900093C2020202020202020F7"
+      offset="8"
+      size="8"
+      encoding="ascii"
+      name="DECK4_PITCH"/>
+	  
+	  
+<!-- DECK4bpm  -->
+<text sysex="F0477F151800093C2020202020202020F7"
+      offset="8"
+      size="8"
+      encoding="ascii"
+      name="DECK4_BPM"/>
+
+
+<!-- sampe lenght -->
+<text sysex="F0477F151B00093C2020202020202020F7"
+      offset="8"
+      size="8"
+      encoding="ascii"
+      name="SAMPLE_BPM"/>
+	  
+<!-- sample bpm -->
+<text sysex="F0477F151B0009332020202020202020F7"
+      offset="8"
+      size="8"
+      encoding="ascii"
+      name="SAMPLE_LENGHT"/>
+	  
+<text sysex="F0477F151B00092B2020202020202020F7"
+      offset="8"
+      size="8"
+      encoding="ascii"
+      name="SAMPLE_GROUP"/>
+	  
+	  
+	  
+<text sysex="F0477F151B00091A2020202020202020F7"
+      offset="8"
+      size="8"
+      encoding="ascii"
+      name="DECK_LOOP_SIZE"/>
+	  
+	  
+<!-- sampler vol -->
+<text sysex="F0477F151A00043C202020F7"
+      offset="8"
+      size="3"
+      encoding="ascii"
+      name="SAMPLER_VOLUME"/>
+	  
+	  
+<!-- animation -->
+<!-- <text sysex="F0477F151A00093C3E2D2D2D2D2D2D2DF7"
+      offset="8"
+      size="8"
+      encoding="ascii"
+      name="ANIM_01"/> -->
+	  
+	  
+	  
+
+		
+
+<button note="0x00" name="ENC_TOUCH_1" channel="0"/>
+<button note="0x01" name="ENC_TOUCH_2" channel="0"/>
+<button note="0x02" name="ENC_TOUCH_3" channel="0"/>
+<button note="0x03" name="ENC_TOUCH_4" channel="0"/>
+<button note="0x04" name="ENC_TOUCH_5" channel="0"/>
+<button note="0x05" name="ENC_TOUCH_6" channel="0"/>
+<button note="0x06" name="ENC_TOUCH_7" channel="0"/>
+
+
+
+<!--button note="0x07" name="ENC_TOUCH_8" channel="0"/>
+<button note="0x08" name="ENC_TOUCH_9" channel="0"/-->
+
+
+<encoder cc="0x47" name="ENC_ROT_1" channel="0"/>
+<encoder cc="0x48" name="ENC_ROT_2" channel="0"/>
+<encoder cc="0x49" name="ENC_ROT_3" channel="0"/>
+<encoder cc="0x4a" name="ENC_ROT_4" channel="0"/>
+<encoder cc="0x4b" name="ENC_ROT_5" channel="0"/>
+<encoder cc="0x4c" name="ENC_ROT_6" channel="0"/>
+<encoder cc="0x4d" name="ENC_ROT_7" channel="0"/>
+<encoder cc="0x4e" name="ENC_ROT_8" channel="0"/>
+<encoder cc="0x4f" name="ENC_ROT_9" channel="0"/>
+
+
+<!-- toggle fx on off -->
+<button cc="0x14" value="0x7F" off="0x00" name="FX_TOGGLE_1" channel="0"/>
+<button cc="0x15" value="0x7F" off="0x00" name="FX_TOGGLE_2" channel="0"/>
+<button cc="0x16" value="0x7F" off="0x00" name="FX_TOGGLE_3" channel="0"/>
+<button cc="0x17" value="0x7F" off="0x00" name="FX_TOGGLE_4" channel="0"/>
+<button cc="0x18" value="0x7F" off="0x00" name="FX_TOGGLE_5" channel="0"/>
+<button cc="0x19" value="0x7F" off="0x00" name="FX_TOGGLE_6" channel="0"/>
+<button cc="0x1A" value="0x7F" off="0x00" name="FX_SAMPLER_TOGGLE" channel="0"/>
+
+<!-- fx OFF -->
+<button cc="0x1B" value="0x7F" off="0x00" name="FX_ALL_OFF" channel="0"/>
+
+
+
+<!-- fx led -->
+<led cc="0x14" value="0x13" zero="0x0A" name="LED_FX_1" default="FX_TOGGLE_1" channel="0"/>
+<led cc="0x15" value="0x13" zero="0x0A" name="LED_FX_2" default="FX_TOGGLE_2" channel="0"/>
+<led cc="0x16" value="0x13" zero="0x0A" name="LED_FX_3" default="FX_TOGGLE_3" channel="0"/>
+<led cc="0x17" value="0x13" zero="0x0A" name="LED_FX_4" default="FX_TOGGLE_4" channel="0"/>
+<led cc="0x18" value="0x13" zero="0x0A" name="LED_FX_5" default="FX_TOGGLE_5" channel="0"/>
+<led cc="0x19" value="0x13" zero="0x0A" name="LED_FX_6" default="FX_TOGGLE_6" channel="0"/>
+<led cc="0x1A" value="0x13" zero="0x10" name="LED_FX_7" default="FX_SAMPLER_TOGGLE" channel="0"/>
+
+<led cc="0x1B" value="0x06" zero="0x10" name="LED_FX_ALL" channel="0"/>
+
+<!-- touch strip assign -->
+<button cc="0x66" value="0x7F" off="0x00" name="FX_TOUCH_SELECT_1" channel="0"/>
+<button cc="0x67" value="0x7F" off="0x00" name="FX_TOUCH_SELECT_2" channel="0"/>
+<button cc="0x68" value="0x7F" off="0x00" name="FX_TOUCH_SELECT_3" channel="0"/>
+<button cc="0x69" value="0x7F" off="0x00" name="FX_TOUCH_SELECT_4" channel="0"/>
+<button cc="0x6A" value="0x7F" off="0x00" name="FX_TOUCH_SELECT_5" channel="0"/>
+<button cc="0x6B" value="0x7F" off="0x00" name="FX_TOUCH_SELECT_6" channel="0"/>
+<button cc="0x6C" value="0x7F" off="0x00" name="FX_TOUCH_SELECT_7" channel="0"/>
+
+
+<!-- touch strip lock unlock -->
+<button cc="0x6D" value="0x7F" off="0x00" name="FX_TOUCH_LOCK" channel="0"/>
+<led cc="0x6D" value="0x05" zero="0x03" name="LED_FX_TOUCH_LOCK" default="FX_TOUCH_LOCK" channel="0"/>
+
+<!-- touch select led -->
+<led cc="0x66" value="0x2D" zero="0x21" name="LED_FX_TOUCH_SELECT_1" channel="0"/>
+<led cc="0x67" value="0x2D" zero="0x21" name="LED_FX_TOUCH_SELECT_2" channel="0"/>
+<led cc="0x68" value="0x2D" zero="0x21" name="LED_FX_TOUCH_SELECT_3" channel="0"/>
+<led cc="0x69" value="0x2D" zero="0x21" name="LED_FX_TOUCH_SELECT_4" channel="0"/>
+<led cc="0x6A" value="0x2D" zero="0x21" name="LED_FX_TOUCH_SELECT_5" channel="0"/>
+<led cc="0x6B" value="0x2D" zero="0x21" name="LED_FX_TOUCH_SELECT_6" channel="0"/>
+<led cc="0x6C" value="0x2D" zero="0x21" name="LED_FX_TOUCH_SELECT_7" channel="0"/>
+
+
+
+<!-- bank change -->
+<button cc="0x3E" value="0x7F" off="0x00" name="SAMPLER_BANK_PREV" channel="0"/>
+<button cc="0x3F" value="0x7F" off="0x00" name="SAMPLER_BANK_NEXT" channel="0"/>
+
+<!-- encoders touch switch -->
+<button cc="0x03" value="0x7F" off="0x00" name="ENC_TOUCH_FX_TOGGLE" channel="0"/>
+
+
+<!-- animation toggle -->
+<!-- <button cc="0x73" value="0x7F" off="0x00" name="DISPLAY_ANIMATION_TOGGLE" channel="0"/> -->
+
+
+
+
+
+<!-- screen quadrants 8x4 - this thing has like 4 screens
+
+F0 47 7F 15 18 00 09 00 3E 2D 2D 2D 2D 2D 2D 2D F7
+F0 47 7F 15 18 00 09 09 3E 2D 2D 2D 2D 2D 2D 2D F7
+F0 47 7F 15 18 00 09 11 3E 2D 2D 2D 2D 2D 2D 2D F7
+F0 47 7F 15 18 00 09 1A 3E 2D 2D 2D 2D 2D 2D 2D F7
+F0 47 7F 15 18 00 09 22 3E 2D 2D 2D 2D 2D 2D 2D F7
+F0 47 7F 15 18 00 09 2B 3E 2D 2D 2D 2D 2D 2D 2D F7
+F0 47 7F 15 18 00 09 33 3E 2D 2D 2D 2D 2D 2D 2D F7
+F0 47 7F 15 18 00 09 3C 3E 2D 2D 2D 2D 2D 2D 2D F7
+
+F0 47 7F 15 19 00 09 00 3E 2D 2D 2D 2D 2D 2D 2D F7
+F0 47 7F 15 19 00 09 09 3E 2D 2D 2D 2D 2D 2D 2D F7
+F0 47 7F 15 19 00 09 11 3E 2D 2D 2D 2D 2D 2D 2D F7
+F0 47 7F 15 19 00 09 1A 3E 2D 2D 2D 2D 2D 2D 2D F7
+F0 47 7F 15 19 00 09 22 3E 2D 2D 2D 2D 2D 2D 2D F7
+F0 47 7F 15 19 00 09 2B 3E 2D 2D 2D 2D 2D 2D 2D F7
+F0 47 7F 15 19 00 09 33 3E 2D 2D 2D 2D 2D 2D 2D F7
+F0 47 7F 15 19 00 09 3C 3E 2D 2D 2D 2D 2D 2D 2D F7
+
+F0 47 7F 15 1A 00 09 00 3E 2D 2D 2D 2D 2D 2D 2D F7
+F0 47 7F 15 1A 00 09 09 3E 2D 2D 2D 2D 2D 2D 2D F7
+F0 47 7F 15 1A 00 09 11 3E 2D 2D 2D 2D 2D 2D 2D F7
+F0 47 7F 15 1A 00 09 1A 3E 2D 2D 2D 2D 2D 2D 2D F7
+F0 47 7F 15 1A 00 09 22 3E 2D 2D 2D 2D 2D 2D 2D F7
+F0 47 7F 15 1A 00 09 2B 3E 2D 2D 2D 2D 2D 2D 2D F7
+F0 47 7F 15 1A 00 09 33 3E 2D 2D 2D 2D 2D 2D 2D F7
+F0 47 7F 15 1A 00 09 3C 3E 2D 2D 2D 2D 2D 2D 2D F7
+
+F0 47 7F 15 1B 00 09 00 3E 2D 2D 2D 2D 2D 2D 2D F7
+F0 47 7F 15 1B 00 09 09 3E 2D 2D 2D 2D 2D 2D 2D F7
+F0 47 7F 15 1B 00 09 11 3E 2D 2D 2D 2D 2D 2D 2D F7
+F0 47 7F 15 1B 00 09 1A 3E 2D 2D 2D 2D 2D 2D 2D F7
+F0 47 7F 15 1B 00 09 22 3E 2D 2D 2D 2D 2D 2D 2D F7
+F0 47 7F 15 1B 00 09 2B 3E 2D 2D 2D 2D 2D 2D 2D F7
+F0 47 7F 15 1B 00 09 33 3E 2D 2D 2D 2D 2D 2D 2D F7
+F0 47 7F 15 1B 00 09 3C 3E 2D 2D 2D 2D 2D 2D 2D F7
+
+F0477F15180012002e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2eF7
+F0477F15180012112e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2eF7
+F0477F15180012222e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2eF7
+F0477F15180012332e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2eF7
+
+F0477F15190012002e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2eF7
+F0477F15190012112e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2eF7
+F0477F15190012222e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2eF7
+F0477F15190012332e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2eF7
+
+F0477F151A0012002e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2eF7
+F0477F151A0012112e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2eF7
+F0477F151A0012222e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2eF7
+F0477F151A0012332e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2eF7
+
+F0477F151B0012002e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2eF7
+F0477F151B0012112e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2eF7
+F0477F151B0012222e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2eF7
+F0477F151B0012332e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2eF7
+
+
+Quadrant 1, quad 2, quad 3, quad 4 is a complete row from left to right and so on
+There is a phisical space between quadrants (aprox 1 char).
+This makes "." all over the screen
+
+Row 1,quadrant 1 F0477F15180012002e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2eF7
+Row 1,quadrant 2 F0477F15180012112e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2eF7
+Row 1,quadrant 3 F0477F15180012222e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2eF7
+Row 1,quadrant 4 F0477F15180012332e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2eF7
+
+Row 2,quadrant 1 F0477F15190012002e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2eF7
+Row 2,quadrant 2 F0477F15190012112e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2eF7
+Row 2,quadrant 3 F0477F15190012222e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2eF7
+Row 2,quadrant 4 F0477F15190012332e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2eF7
+
+Row 3,quadrant 1 F0477F151A0012002e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2eF7
+Row 3,quadrant 2 F0477F151A0012112e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2eF7
+Row 3,quadrant 3 F0477F151A0012222e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2eF7
+Row 3,quadrant 4 F0477F151A0012332e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2eF7
+
+Row 4,quadrant 1 F0477F151B0012002e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2eF7
+Row 4,quadrant 2 F0477F151B0012112e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2eF7
+Row 4,quadrant 3 F0477F151B0012222e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2eF7
+Row 4,quadrant 4 F0477F151B0012332e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2eF7
+
+-->
+
+</device>

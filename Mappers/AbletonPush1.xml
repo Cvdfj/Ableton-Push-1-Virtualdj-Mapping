@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper device="AbletonPUSH1" author="Ground" version="850" date="2026-11-14">
+	<map value="DEVICE" action="deck 2 select" />
+	<map value="TRACK" action="get_sample_name 1 &amp; set &apos;$sample_name&apos; &apos;`get_sample_name 1`&apos; &amp; var_list" modified="1794566711" />
+	<map value="SAMPLE_NAME" action="get_sample_name" />
+ 	<!--map value="SAMPLE_TITLE" action="get_text &apos;S:&apos;" /-->
+  	<!--map value="BANK_TITLE" action="get_text &apos;B:&apos;" /-->
+ 	<map value="BANK_VALUE" action="get_sampler_bank" />
+	<!--map value="TEXT_SAMPLER_ARM_STATE_TITLE" action="get_text &apos;P:&apos;" /-->
+	<!--map value="SAMPLE_GROUP_TITLE" action="get_text &apos;G:&apos;" /-->
+
+	<map value="SAMPLER_FX_NAME" action="get_text '`get_effect_name sampler`'" />
+	<map value="SAMPLER_FX_VALUE" action="get_effect_slider_text &apos;sampler&apos; 1" />
+	<map value="SAMPLER_FX_PARAM2" action="get_effect_slider_text &apos;sampler&apos; 2" />
+	<map value="DECK4_PITCH_TITLE" action="get_text &apos;Pitch&apos;" />
+
+	
+	<!-- init -->
+	<map value="ONINIT" action="set '$fxslot' 1 &amp; set '$fxlock' 0 &amp; set '$fxenc_count1' 0 &amp; set '$fxenc_count2' 0 &amp; set '$fxenc_count3' 0 &amp; set '$fxenc_count4' 0 &amp; set '$fxenc_count5' 0 &amp; set '$fxenc_count6' 0 &amp; set '$fxenc_count7' 0 &amp; set '$enctouchfx' 0 &amp; set '$displayanim' 0" />
+
+
+	<!-- shows bpm info -->
+	<map value="DECK4_BPM" action="get_text '`deck 4 get_bpm`'" />
+
+	<!-- shows EFX lock -->
+	<map value="EFX" action="var '$enctouchfx' 1 ? get_text 'EFX' : get_text ''" />
+
+
+
+
+	
+
+	
+	<!-- animation -->
+		<!-- <map value="ANIM_01" action="var '$displayanim' 1 ? get_text 'ANIM_01' : get_text ''" /> -->
+
+	
+	<!-- <map value="DISPLAY_ANIMATION_TOGGLE" action="toggle '$displayanim'" /> -->
+	
+
+
+
+
+
+
+	<!-- fx enc touch enable-->
+	<map value="ENC_TOUCH_FX_TOGGLE" action="toggle '$enctouchfx'" />
+	
+	<!--map value="ENC_TOUCH_1" action="var '$enctouchfx' 1 ? deck 4 effect_active 1 while_pressed : nothing" />
+	<map value="ENC_TOUCH_2" action="var '$enctouchfx' 1 ? deck 4 effect_active 2 while_pressed : nothing" />
+	<map value="ENC_TOUCH_3" action="var '$enctouchfx' 1 ? deck 4 effect_active 3 while_pressed : nothing" />
+	<map value="ENC_TOUCH_4" action="var '$enctouchfx' 1 ? deck 4 effect_active 4 while_pressed : nothing" />
+	<map value="ENC_TOUCH_5" action="var '$enctouchfx' 1 ? deck 4 effect_active 5 while_pressed : nothing" />
+	<map value="ENC_TOUCH_6" action="var '$enctouchfx' 1 ? deck 4 effect_active 6 while_pressed : nothing" />
+	<map value="ENC_TOUCH_7" action="var '$enctouchfx' 1 ? effect_active sampler 1 while_pressed : nothing" /-->
+
+	<map value="ENC_TOUCH_1" action="down ? var '$enctouchfx' 1 ? deck 4 effect_active 1 ? set '$enc_touch_fx1_temp' 0 : set '$enc_touch_fx1_temp' 1 &amp; deck 4 effect_active 1 on : nothing : var '$enc_touch_fx1_temp' 1 ? deck 4 effect_active 1 off &amp; set '$enc_touch_fx1_temp' 0 : nothing" />
+	<map value="ENC_TOUCH_2" action="down ? var '$enctouchfx' 1 ? deck 4 effect_active 2 ? set '$enc_touch_fx2_temp' 0 : set '$enc_touch_fx2_temp' 1 &amp; deck 4 effect_active 2 on : nothing : var '$enc_touch_fx2_temp' 1 ? deck 4 effect_active 2 off &amp; set '$enc_touch_fx2_temp' 0 : nothing" />
+	<map value="ENC_TOUCH_3" action="down ? var '$enctouchfx' 1 ? deck 4 effect_active 3 ? set '$enc_touch_fx3_temp' 0 : set '$enc_touch_fx3_temp' 1 &amp; deck 4 effect_active 3 on : nothing : var '$enc_touch_fx3_temp' 1 ? deck 4 effect_active 3 off &amp; set '$enc_touch_fx3_temp' 0 : nothing" />
+	<map value="ENC_TOUCH_4" action="down ? var '$enctouchfx' 1 ? deck 4 effect_active 4 ? set '$enc_touch_fx4_temp' 0 : set '$enc_touch_fx4_temp' 1 &amp; deck 4 effect_active 4 on : nothing : var '$enc_touch_fx4_temp' 1 ? deck 4 effect_active 4 off &amp; set '$enc_touch_fx4_temp' 0 : nothing" />
+	<map value="ENC_TOUCH_5" action="down ? var '$enctouchfx' 1 ? deck 4 effect_active 5 ? set '$enc_touch_fx5_temp' 0 : set '$enc_touch_fx5_temp' 1 &amp; deck 4 effect_active 5 on : nothing : var '$enc_touch_fx5_temp' 1 ? deck 4 effect_active 5 off &amp; set '$enc_touch_fx5_temp' 0 : nothing" />
+	<map value="ENC_TOUCH_6" action="down ? var '$enctouchfx' 1 ? deck 4 effect_active 6 ? set '$enc_touch_fx6_temp' 0 : set '$enc_touch_fx6_temp' 1 &amp; deck 4 effect_active 6 on : nothing : var '$enc_touch_fx6_temp' 1 ? deck 4 effect_active 6 off &amp; set '$enc_touch_fx6_temp' 0 : nothing" />
+	<map value="ENC_TOUCH_7" action="down ? var '$enctouchfx' 1 ? effect_active sampler 1 ? set '$enc_touch_fx7_temp' 0 : set '$enc_touch_fx7_temp' 1 &amp; effect_active sampler 1 on : nothing : var '$enc_touch_fx7_temp' 1 ? effect_active sampler 1 off &amp; set '$enc_touch_fx7_temp' 0 : nothing" />
+
+
+
+
+	<!-- focus deck 1.2 -->
+	<map value="DECK_A" action="deck 1 select" />
+	<map value="DECK_B" action="deck 2 select" />
+
+	<!-- deck 4pitch -->
+<!-- 	<map value="DECK4PITCH" action="param_multiply 0.01 &amp; deck 4 pitch_relative" />
+ -->
+	<!-- deck loop size -->
+	<map value="DECK_LOOP_SIZE" action="get_text 'D_`get_deck_letter` `deck default get_loop`'" />
+	<map value="DECK4_PITCH" action="get_text '`deck 4 get_pitch`%'" />
+
+
+
+
+	<!--shift key-->
+	<map value="SHIFT_KEY" action="set '$shiftkey' 1 while_pressed" />
+
+
+
+	<!-- arm led -->
+	<map value="TEXT_SAMPLER_ARM_STATE" action="var '$samplerarmed' 1 ? get_text 'Arm' : get_text 'Lock'" />
+
+		
+	<!-- stop all -->
+	<map value="SAMPLER_STOP_ALL" action="sampler_stop all" />
+	<map value="LED_SAMPLER_STOP_ALL" action="sampler_used ? on : blink 500ms" />
+	
+	<!-- delete sample -->
+	<map value="SAMPLER_REMOVE" action="set '$samplerdelete' 1 while_pressed" />	
+	
+	
+	
+	<!-- set loop size for recording a saple -->
+	<map value="ENC_MOST_LEFT" action="param_smaller 0% ? loop_select -1 : loop_select +1" />
+	
+	
+	<!-- sampler record lock (arm) -->
+	<map value="SAMPLER_RECORD_ARM" action="toggle '$samplerarmed' &amp; sampler_options 'locked'" />
+	<map value="LED_SAMPLER_RECORD_ARM" action="var '$samplerarmed' 1 ? blink 500ms : on" />
+	
+	
+	<map value="FX1_VALUE" action="deck 4 get_effect_slider_text 1 1" />
+	<map value="FX1_PARAM2" action="deck 4 get_effect_slider_text 1 2" />
+	<map value="FX2_VALUE" action="deck 4 get_effect_slider_text 2 1" />
+	<map value="FX2_PARAM2" action="deck 4 get_effect_slider_text 2 2" />
+	<map value="FX3_VALUE" action="deck 4 get_effect_slider_text 3 1" />
+	<map value="FX3_PARAM2" action="deck 4 get_effect_slider_text 3 2" />
+	<map value="FX4_VALUE" action="deck 4 get_effect_slider_text 4 1" />
+	<map value="FX4_PARAM2" action="deck 4 get_effect_slider_text 4 2" />
+	<map value="FX5_VALUE" action="deck 4 get_effect_slider_text 5 1" />
+	<map value="FX5_PARAM2" action="deck 4 get_effect_slider_text 5 2" />
+	<map value="FX6_VALUE" action="deck 4 get_effect_slider_text 6 1" />
+	<map value="FX6_PARAM2" action="deck 4 get_effect_slider_text 6 2" />
+	
+	
+	<!--fx all OFF -->
+	<map value="FX_ALL_OFF" action="deck 4 effect_disable_all &amp; effect_disable_all sampler" />
+	
+	
+	<!--show fx name on the screen -->
+	<map value="DECK_FX1" action="deck 4 get_effect_name 1" />
+	<map value="DECK_FX2" action="deck 4 get_effect_name 2" />
+	<map value="DECK_FX3" action="deck 4 get_effect_name 3" />
+	<map value="DECK_FX4" action="deck 4 get_effect_name 4" />
+	<map value="DECK_FX5" action="deck 4 get_effect_name 5" />
+	<map value="DECK_FX6" action="deck 4 get_effect_name 6" />
+	
+	
+	<!-- fx params -->
+	<map value="ENC_ROT_1" action="var '$shiftkey' 1 ? param_multiply 0.01 &amp; deck 4 effect_slider 1 2 : var '$fxselect' 1 ? param_multiply 0.1 &amp; set '$fxenc_count1' &amp; var_greater '$fxenc_count1' 0.49 ? set '$fxenc_count1' 0 &amp; deck 4 effect_select 1 +1 : var_smaller '$fxenc_count1' -0.49 ? set '$fxenc_count1' 0 &amp; deck 4 effect_select 1 -1 : nothing : param_multiply 0.01 &amp; deck 4 effect_slider 1 1" />
+	<map value="ENC_ROT_2" action="var '$shiftkey' 1 ? param_multiply 0.01 &amp; deck 4 effect_slider 2 2 : var '$fxselect' 1 ? param_multiply 0.1 &amp; set '$fxenc_count2' &amp; var_greater '$fxenc_count2' 0.49 ? set '$fxenc_count2' 0 &amp; deck 4 effect_select 2 +1 : var_smaller '$fxenc_count2' -0.49 ? set '$fxenc_count2' 0 &amp; deck 4 effect_select 2 -1 : nothing : param_multiply 0.01 &amp; deck 4 effect_slider 2 1" />
+	<map value="ENC_ROT_3" action="var '$shiftkey' 1 ? param_multiply 0.01 &amp; deck 4 effect_slider 3 2 : var '$fxselect' 1 ? param_multiply 0.1 &amp; set '$fxenc_count3' &amp; var_greater '$fxenc_count3' 0.49 ? set '$fxenc_count3' 0 &amp; deck 4 effect_select 3 +1 : var_smaller '$fxenc_count3' -0.49 ? set '$fxenc_count3' 0 &amp; deck 4 effect_select 3 -1 : nothing : param_multiply 0.01 &amp; deck 4 effect_slider 3 1" />
+	<map value="ENC_ROT_4" action="var '$shiftkey' 1 ? param_multiply 0.01 &amp; deck 4 effect_slider 4 2 : var '$fxselect' 1 ? param_multiply 0.1 &amp; set '$fxenc_count4' &amp; var_greater '$fxenc_count4' 0.49 ? set '$fxenc_count4' 0 &amp; deck 4 effect_select 4 +1 : var_smaller '$fxenc_count4' -0.49 ? set '$fxenc_count4' 0 &amp; deck 4 effect_select 4 -1 : nothing : param_multiply 0.01 &amp; deck 4 effect_slider 4 1" />
+	<map value="ENC_ROT_5" action="var '$shiftkey' 1 ? param_multiply 0.01 &amp; deck 4 effect_slider 5 2 : var '$fxselect' 1 ? param_multiply 0.1 &amp; set '$fxenc_count5' &amp; var_greater '$fxenc_count5' 0.49 ? set '$fxenc_count5' 0 &amp; deck 4 effect_select 5 +1 : var_smaller '$fxenc_count5' -0.49 ? set '$fxenc_count5' 0 &amp; deck 4 effect_select 5 -1 : nothing : param_multiply 0.01 &amp; deck 4 effect_slider 5 1" />
+	<map value="ENC_ROT_6" action="var '$shiftkey' 1 ? param_multiply 0.01 &amp; deck 4 effect_slider 6 2 : var '$fxselect' 1 ? param_multiply 0.1 &amp; set '$fxenc_count6' &amp; var_greater '$fxenc_count6' 0.49 ? set '$fxenc_count6' 0 &amp; deck 4 effect_select 6 +1 : var_smaller '$fxenc_count6' -0.49 ? set '$fxenc_count6' 0 &amp; deck 4 effect_select 6 -1 : nothing : param_multiply 0.01 &amp; deck 4 effect_slider 6 1" />
+	<!--map value="ENC_ROT_7" action="var '$fxselect' 1 ? param_multiply 0.1 &amp; set '$fxenc_count7' &amp; var_greater '$fxenc_count7' 0.49 ? set '$fxenc_count7' 0 &amp; effect_select sampler +1 : var_smaller '$fxenc_count7' -0.49 ? set '$fxenc_count7' 0 &amp; effect_select sampler -1 : nothing : param_multiply 0.01 &amp; effect_slider sampler 1" /-->
+	<map value="ENC_ROT_7" action="var '$shiftkey' 1 ? param_multiply 0.01 &amp; effect_slider 'sampler' 2 : var '$fxselect' 1 ? param_multiply 0.1 &amp; set '$fxenc_count7' &amp; var_greater '$fxenc_count7' 0.49 ? set '$fxenc_count7' 0 &amp; effect_select sampler +1 : var_smaller '$fxenc_count7' -0.49 ? set '$fxenc_count7' 0 &amp; effect_select sampler -1 : nothing : param_multiply 0.01 &amp; effect_slider 'sampler' 1" />
+	
+	<!--map value="ENC_ROT_8" action="param_multiply 0.01 &amp; effect_slider 'sampler' 2" /-->
+	<map value="ENC_ROT_8" action="param_multiply 0.01 &amp; deck 4 pitch_relative" />
+
+	
+	<!-- fx effects toggle -->
+	<map value="FX_TOGGLE_1" action="deck 4 effect_active 1" />
+	<map value="FX_TOGGLE_2" action="deck 4 effect_active 2" />
+	<map value="FX_TOGGLE_3" action="deck 4 effect_active 3" />
+	<map value="FX_TOGGLE_4" action="deck 4 effect_active 4" />
+	<map value="FX_TOGGLE_5" action="deck 4 effect_active 5" />
+	<map value="FX_TOGGLE_6" action="deck 4 effect_active 6" />
+	<!-- fx sampler toggle -->
+	<map value="FX_SAMPLER_TOGGLE" action="effect_active 'sampler'" />
+	
+	<!-- sampler vol -->
+	<map value="ENC_ROT_9" action="param_multiply 0.01 &amp; sampler_volume_master" />
+	
+	
+	<map value="SAMPLER_VOLUME" action="get_text `sampler_volume_master &amp; param_multiply 100 &amp; param_cast 'integer'`" />
+	
+	
+	
+	
+
+	<!-- touch fx -->
+	<map value="TOUCH_STRIP" action="param_equal 50% ? nothing : var '$fxslot' 1 ? deck 4 effect_slider 1 1 : var '$fxslot' 2 ? deck 4 effect_slider 2 1 : var '$fxslot' 3 ? deck 4 effect_slider 3 1 : var '$fxslot' 4 ? deck 4 effect_slider 4 1 : var '$fxslot' 5 ? deck 4 effect_slider 5 1 : var '$fxslot' 6 ? deck 4 effect_slider 6 1 : var '$fxslot' 7 ? effect_slider 'sampler' 1 : nothing" />
+
+	<!-- fx select -->
+	<map value="FX_ADD_EFFECT" action="set '$fxselect' 1 while_pressed" />
+
+	<!-- touch lock unlock -->
+	<map value="FX_TOUCH_LOCK" action="toggle '$fxlock'" />
+	<map value="TOUCH_STRIP_TOUCH" action="var '$fxlock' 1 ? var '$fxslot' 1 ? param_greater 0.5 ? deck 4 effect_active 1 on : deck 4 effect_active 1 off : var '$fxslot' 2 ? param_greater 0.5 ? deck 4 effect_active 2 on : deck 4 effect_active 2 off : var '$fxslot' 3 ? param_greater 0.5 ? deck 4 effect_active 3 on : deck 4 effect_active 3 off : var '$fxslot' 4 ? param_greater 0.5 ? deck 4 effect_active 4 on : deck 4 effect_active 4 off : var '$fxslot' 5 ? param_greater 0.5 ? deck 4 effect_active 5 on : deck 4 effect_active 5 off : var '$fxslot' 6 ? param_greater 0.5 ? deck 4 effect_active 6 on : deck 4 effect_active 6 off : var '$fxslot' 7 ? param_greater 0.5 ? effect_active 'sampler' on : effect_active 'sampler' off : nothing : nothing" />
+
+	<!-- led touch select -->
+	<map value="LED_FX_TOUCH_SELECT_1" action="var '$fxslot' 1 ? on : off" />
+	<map value="LED_FX_TOUCH_SELECT_2" action="var '$fxslot' 2 ? on : off" />
+	<map value="LED_FX_TOUCH_SELECT_3" action="var '$fxslot' 3 ? on : off" />
+	<map value="LED_FX_TOUCH_SELECT_4" action="var '$fxslot' 4 ? on : off" />
+	<map value="LED_FX_TOUCH_SELECT_5" action="var '$fxslot' 5 ? on : off" />
+	<map value="LED_FX_TOUCH_SELECT_6" action="var '$fxslot' 6 ? on : off" />
+	<map value="LED_FX_TOUCH_SELECT_7" action="var '$fxslot' 7 ? on : off" />
+
+	<!-- select fxslot for touchstrip -->
+	<map value="FX_TOUCH_SELECT_1" action="set '$fxslot' 1" />
+	<map value="FX_TOUCH_SELECT_2" action="set '$fxslot' 2" />
+	<map value="FX_TOUCH_SELECT_3" action="set '$fxslot' 3" />
+	<map value="FX_TOUCH_SELECT_4" action="set '$fxslot' 4" />
+	<map value="FX_TOUCH_SELECT_5" action="set '$fxslot' 5" />
+	<map value="FX_TOUCH_SELECT_6" action="set '$fxslot' 6" />
+	<map value="FX_TOUCH_SELECT_7" action="set '$fxslot' 7" />
+	
+	
+	<!-- bank change -->
+	<map value="SAMPLER_BANK_PREV" action="sampler_bank -1" />
+	<map value="SAMPLER_BANK_NEXT" action="sampler_bank +1" />
+	
+	
+	
+
+
+
+
+	<!-- sample bpm -->
+	<!--map value="SAMPLE_GROUP" action="get_sample_info 1 group" /-->
+
+
+	<!--map value="SAMPLE_LENGHT" action="var '$lastplayed' 1 ? get_text 'L:`get_sample_info 1 length`' : var '$lastplayed' 2 ? get_text 'L:`get_sample_info 2 length`' : var '$lastplayed' 3 ? get_text 'L:`get_sample_info 3 length`' : var '$lastplayed' 4 ? get_text 'L:`get_sample_info 4 length`' : var '$lastplayed' 5 ? get_text 'L:`get_sample_info 5 length`' : var '$lastplayed' 6 ? get_text 'L:`get_sample_info 6 length`' : var '$lastplayed' 7 ? get_text 'L:`get_sample_info 7 length`' : var '$lastplayed' 8 ? get_text 'L:`get_sample_info 8 length`' : var '$lastplayed' 9 ? get_text 'L:`get_sample_info 9 length`' : var '$lastplayed' 10 ? get_text 'L:`get_sample_info 10 length`' : var '$lastplayed' 11 ? get_text 'L:`get_sample_info 11 length`' : var '$lastplayed' 12 ? get_text 'L:`get_sample_info 12 length`' : var '$lastplayed' 13 ? get_text 'L:`get_sample_info 13 length`' : var '$lastplayed' 14 ? get_text 'L:`get_sample_info 14 length`' : var '$lastplayed' 15 ? get_text 'L:`get_sample_info 15 length`' : var '$lastplayed' 16 ? get_text 'L:`get_sample_info 16 length`' : var '$lastplayed' 17 ? get_text 'L:`get_sample_info 17 length`' : var '$lastplayed' 18 ? get_text 'L:`get_sample_info 18 length`' : var '$lastplayed' 19 ? get_text 'L:`get_sample_info 19 length`' : var '$lastplayed' 20 ? get_text 'L:`get_sample_info 20 length`' : var '$lastplayed' 21 ? get_text 'L:`get_sample_info 21 length`' : var '$lastplayed' 22 ? get_text 'L:`get_sample_info 22 length`' : var '$lastplayed' 23 ? get_text 'L:`get_sample_info 23 length`' : var '$lastplayed' 24 ? get_text 'L:`get_sample_info 24 length`' : var '$lastplayed' 25 ? get_text 'L:`get_sample_info 25 length`' : var '$lastplayed' 26 ? get_text 'L:`get_sample_info 26 length`' : var '$lastplayed' 27 ? get_text 'L:`get_sample_info 27 length`' : var '$lastplayed' 28 ? get_text 'L:`get_sample_info 28 length`' : var '$lastplayed' 29 ? get_text 'L:`get_sample_info 29 length`' : var '$lastplayed' 30 ? get_text 'L:`get_sample_info 30 length`' : var '$lastplayed' 31 ? get_text 'L:`get_sample_info 31 length`' : var '$lastplayed' 32 ? get_text 'L:`get_sample_info 32 length`' : var '$lastplayed' 33 ? get_text 'L:`get_sample_info 33 length`' : var '$lastplayed' 34 ? get_text 'L:`get_sample_info 34 length`' : var '$lastplayed' 35 ? get_text 'L:`get_sample_info 35 length`' : var '$lastplayed' 36 ? get_text 'L:`get_sample_info 36 length`' : var '$lastplayed' 37 ? get_text 'L:`get_sample_info 37 length`' : var '$lastplayed' 38 ? get_text 'L:`get_sample_info 38 length`' : var '$lastplayed' 39 ? get_text 'L:`get_sample_info 39 length`' : var '$lastplayed' 40 ? get_text 'L:`get_sample_info 40 length`' : var '$lastplayed' 41 ? get_text 'L:`get_sample_info 41 length`' : var '$lastplayed' 42 ? get_text 'L:`get_sample_info 42 length`' : var '$lastplayed' 43 ? get_text 'L:`get_sample_info 43 length`' : var '$lastplayed' 44 ? get_text 'L:`get_sample_info 44 length`' : var '$lastplayed' 45 ? get_text 'L:`get_sample_info 45 length`' : var '$lastplayed' 46 ? get_text 'L:`get_sample_info 46 length`' : var '$lastplayed' 47 ? get_text 'L:`get_sample_info 47 length`' : var '$lastplayed' 48 ? get_text 'L:`get_sample_info 48 length`' : var '$lastplayed' 49 ? get_text 'L:`get_sample_info 49 length`' : var '$lastplayed' 50 ? get_text 'L:`get_sample_info 50 length`' : var '$lastplayed' 51 ? get_text 'L:`get_sample_info 51 length`' : var '$lastplayed' 52 ? get_text 'L:`get_sample_info 52 length`' : var '$lastplayed' 53 ? get_text 'L:`get_sample_info 53 length`' : var '$lastplayed' 54 ? get_text 'L:`get_sample_info 54 length`' : var '$lastplayed' 55 ? get_text 'L:`get_sample_info 55 length`' : var '$lastplayed' 56 ? get_text 'L:`get_sample_info 56 length`' : var '$lastplayed' 57 ? get_text 'L:`get_sample_info 57 length`' : var '$lastplayed' 58 ? get_text 'L:`get_sample_info 58 length`' : var '$lastplayed' 59 ? get_text 'L:`get_sample_info 59 length`' : var '$lastplayed' 60 ? get_text 'L:`get_sample_info 60 length`' : var '$lastplayed' 61 ? get_text 'L:`get_sample_info 61 length`' : var '$lastplayed' 62 ? get_text 'L:`get_sample_info 62 length`' : var '$lastplayed' 63 ? get_text 'L:`get_sample_info 63 length`' : var '$lastplayed' 64 ? get_text 'L:`get_sample_info 64 length`' : nothing" /-->
+	<map value="SAMPLE_LENGHT" action="var '$lastplayed' 1 ? get_text '`get_sample_info 1 length`' : var '$lastplayed' 2 ? get_text '`get_sample_info 2 length`' : var '$lastplayed' 3 ? get_text '`get_sample_info 3 length`' : var '$lastplayed' 4 ? get_text '`get_sample_info 4 length`' : var '$lastplayed' 5 ? get_text '`get_sample_info 5 length`' : var '$lastplayed' 6 ? get_text '`get_sample_info 6 length`' : var '$lastplayed' 7 ? get_text '`get_sample_info 7 length`' : var '$lastplayed' 8 ? get_text '`get_sample_info 8 length`' : var '$lastplayed' 9 ? get_text '`get_sample_info 9 length`' : var '$lastplayed' 10 ? get_text '`get_sample_info 10 length`' : var '$lastplayed' 11 ? get_text '`get_sample_info 11 length`' : var '$lastplayed' 12 ? get_text '`get_sample_info 12 length`' : var '$lastplayed' 13 ? get_text '`get_sample_info 13 length`' : var '$lastplayed' 14 ? get_text '`get_sample_info 14 length`' : var '$lastplayed' 15 ? get_text '`get_sample_info 15 length`' : var '$lastplayed' 16 ? get_text '`get_sample_info 16 length`' : var '$lastplayed' 17 ? get_text '`get_sample_info 17 length`' : var '$lastplayed' 18 ? get_text '`get_sample_info 18 length`' : var '$lastplayed' 19 ? get_text '`get_sample_info 19 length`' : var '$lastplayed' 20 ? get_text '`get_sample_info 20 length`' : var '$lastplayed' 21 ? get_text '`get_sample_info 21 length`' : var '$lastplayed' 22 ? get_text '`get_sample_info 22 length`' : var '$lastplayed' 23 ? get_text '`get_sample_info 23 length`' : var '$lastplayed' 24 ? get_text '`get_sample_info 24 length`' : var '$lastplayed' 25 ? get_text '`get_sample_info 25 length`' : var '$lastplayed' 26 ? get_text '`get_sample_info 26 length`' : var '$lastplayed' 27 ? get_text '`get_sample_info 27 length`' : var '$lastplayed' 28 ? get_text '`get_sample_info 28 length`' : var '$lastplayed' 29 ? get_text '`get_sample_info 29 length`' : var '$lastplayed' 30 ? get_text '`get_sample_info 30 length`' : var '$lastplayed' 31 ? get_text '`get_sample_info 31 length`' : var '$lastplayed' 32 ? get_text '`get_sample_info 32 length`' : var '$lastplayed' 33 ? get_text '`get_sample_info 33 length`' : var '$lastplayed' 34 ? get_text '`get_sample_info 34 length`' : var '$lastplayed' 35 ? get_text '`get_sample_info 35 length`' : var '$lastplayed' 36 ? get_text '`get_sample_info 36 length`' : var '$lastplayed' 37 ? get_text '`get_sample_info 37 length`' : var '$lastplayed' 38 ? get_text '`get_sample_info 38 length`' : var '$lastplayed' 39 ? get_text '`get_sample_info 39 length`' : var '$lastplayed' 40 ? get_text '`get_sample_info 40 length`' : var '$lastplayed' 41 ? get_text '`get_sample_info 41 length`' : var '$lastplayed' 42 ? get_text '`get_sample_info 42 length`' : var '$lastplayed' 43 ? get_text '`get_sample_info 43 length`' : var '$lastplayed' 44 ? get_text '`get_sample_info 44 length`' : var '$lastplayed' 45 ? get_text '`get_sample_info 45 length`' : var '$lastplayed' 46 ? get_text '`get_sample_info 46 length`' : var '$lastplayed' 47 ? get_text '`get_sample_info 47 length`' : var '$lastplayed' 48 ? get_text '`get_sample_info 48 length`' : var '$lastplayed' 49 ? get_text '`get_sample_info 49 length`' : var '$lastplayed' 50 ? get_text '`get_sample_info 50 length`' : var '$lastplayed' 51 ? get_text '`get_sample_info 51 length`' : var '$lastplayed' 52 ? get_text '`get_sample_info 52 length`' : var '$lastplayed' 53 ? get_text '`get_sample_info 53 length`' : var '$lastplayed' 54 ? get_text '`get_sample_info 54 length`' : var '$lastplayed' 55 ? get_text '`get_sample_info 55 length`' : var '$lastplayed' 56 ? get_text '`get_sample_info 56 length`' : var '$lastplayed' 57 ? get_text '`get_sample_info 57 length`' : var '$lastplayed' 58 ? get_text '`get_sample_info 58 length`' : var '$lastplayed' 59 ? get_text '`get_sample_info 59 length`' : var '$lastplayed' 60 ? get_text '`get_sample_info 60 length`' : var '$lastplayed' 61 ? get_text '`get_sample_info 61 length`' : var '$lastplayed' 62 ? get_text '`get_sample_info 62 length`' : var '$lastplayed' 63 ? get_text '`get_sample_info 63 length`' : var '$lastplayed' 64 ? get_text '`get_sample_info 64 length`' : nothing" />
+	<map value="SAMPLE_BPM" action="var '$lastplayed' 1 ? get_sample_info 1 bpm : var '$lastplayed' 2 ? get_sample_info 2 bpm : var '$lastplayed' 3 ? get_sample_info 3 bpm : var '$lastplayed' 4 ? get_sample_info 4 bpm : var '$lastplayed' 5 ? get_sample_info 5 bpm : var '$lastplayed' 6 ? get_sample_info 6 bpm : var '$lastplayed' 7 ? get_sample_info 7 bpm : var '$lastplayed' 8 ? get_sample_info 8 bpm : var '$lastplayed' 9 ? get_sample_info 9 bpm : var '$lastplayed' 10 ? get_sample_info 10 bpm : var '$lastplayed' 11 ? get_sample_info 11 bpm : var '$lastplayed' 12 ? get_sample_info 12 bpm : var '$lastplayed' 13 ? get_sample_info 13 bpm : var '$lastplayed' 14 ? get_sample_info 14 bpm : var '$lastplayed' 15 ? get_sample_info 15 bpm : var '$lastplayed' 16 ? get_sample_info 16 bpm : var '$lastplayed' 17 ? get_sample_info 17 bpm : var '$lastplayed' 18 ? get_sample_info 18 bpm : var '$lastplayed' 19 ? get_sample_info 19 bpm : var '$lastplayed' 20 ? get_sample_info 20 bpm : var '$lastplayed' 21 ? get_sample_info 21 bpm : var '$lastplayed' 22 ? get_sample_info 22 bpm : var '$lastplayed' 23 ? get_sample_info 23 bpm : var '$lastplayed' 24 ? get_sample_info 24 bpm : var '$lastplayed' 25 ? get_sample_info 25 bpm : var '$lastplayed' 26 ? get_sample_info 26 bpm : var '$lastplayed' 27 ? get_sample_info 27 bpm : var '$lastplayed' 28 ? get_sample_info 28 bpm : var '$lastplayed' 29 ? get_sample_info 29 bpm : var '$lastplayed' 30 ? get_sample_info 30 bpm : var '$lastplayed' 31 ? get_sample_info 31 bpm : var '$lastplayed' 32 ? get_sample_info 32 bpm : var '$lastplayed' 33 ? get_sample_info 33 bpm : var '$lastplayed' 34 ? get_sample_info 34 bpm : var '$lastplayed' 35 ? get_sample_info 35 bpm : var '$lastplayed' 36 ? get_sample_info 36 bpm : var '$lastplayed' 37 ? get_sample_info 37 bpm : var '$lastplayed' 38 ? get_sample_info 38 bpm : var '$lastplayed' 39 ? get_sample_info 39 bpm : var '$lastplayed' 40 ? get_sample_info 40 bpm : var '$lastplayed' 41 ? get_sample_info 41 bpm : var '$lastplayed' 42 ? get_sample_info 42 bpm : var '$lastplayed' 43 ? get_sample_info 43 bpm : var '$lastplayed' 44 ? get_sample_info 44 bpm : var '$lastplayed' 45 ? get_sample_info 45 bpm : var '$lastplayed' 46 ? get_sample_info 46 bpm : var '$lastplayed' 47 ? get_sample_info 47 bpm : var '$lastplayed' 48 ? get_sample_info 48 bpm : var '$lastplayed' 49 ? get_sample_info 49 bpm : var '$lastplayed' 50 ? get_sample_info 50 bpm : var '$lastplayed' 51 ? get_sample_info 51 bpm : var '$lastplayed' 52 ? get_sample_info 52 bpm : var '$lastplayed' 53 ? get_sample_info 53 bpm : var '$lastplayed' 54 ? get_sample_info 54 bpm : var '$lastplayed' 55 ? get_sample_info 55 bpm : var '$lastplayed' 56 ? get_sample_info 56 bpm : var '$lastplayed' 57 ? get_sample_info 57 bpm : var '$lastplayed' 58 ? get_sample_info 58 bpm : var '$lastplayed' 59 ? get_sample_info 59 bpm : var '$lastplayed' 60 ? get_sample_info 60 bpm : var '$lastplayed' 61 ? get_sample_info 61 bpm : var '$lastplayed' 62 ? get_sample_info 62 bpm : var '$lastplayed' 63 ? get_sample_info 63 bpm : var '$lastplayed' 64 ? get_sample_info 64 bpm : nothing" />
+	<map value="SAMPLE_GROUP" action="var '$lastplayed' 1 ? get_sample_info 1 group : var '$lastplayed' 2 ? get_sample_info 2 group : var '$lastplayed' 3 ? get_sample_info 3 group : var '$lastplayed' 4 ? get_sample_info 4 group : var '$lastplayed' 5 ? get_sample_info 5 group : var '$lastplayed' 6 ? get_sample_info 6 group : var '$lastplayed' 7 ? get_sample_info 7 group : var '$lastplayed' 8 ? get_sample_info 8 group : var '$lastplayed' 9 ? get_sample_info 9 group : var '$lastplayed' 10 ? get_sample_info 10 group : var '$lastplayed' 11 ? get_sample_info 11 group : var '$lastplayed' 12 ? get_sample_info 12 group : var '$lastplayed' 13 ? get_sample_info 13 group : var '$lastplayed' 14 ? get_sample_info 14 group : var '$lastplayed' 15 ? get_sample_info 15 group : var '$lastplayed' 16 ? get_sample_info 16 group : var '$lastplayed' 17 ? get_sample_info 17 group : var '$lastplayed' 18 ? get_sample_info 18 group : var '$lastplayed' 19 ? get_sample_info 19 group : var '$lastplayed' 20 ? get_sample_info 20 group : var '$lastplayed' 21 ? get_sample_info 21 group : var '$lastplayed' 22 ? get_sample_info 22 group : var '$lastplayed' 23 ? get_sample_info 23 group : var '$lastplayed' 24 ? get_sample_info 24 group : var '$lastplayed' 25 ? get_sample_info 25 group : var '$lastplayed' 26 ? get_sample_info 26 group : var '$lastplayed' 27 ? get_sample_info 27 group : var '$lastplayed' 28 ? get_sample_info 28 group : var '$lastplayed' 29 ? get_sample_info 29 group : var '$lastplayed' 30 ? get_sample_info 30 group : var '$lastplayed' 31 ? get_sample_info 31 group : var '$lastplayed' 32 ? get_sample_info 32 group : var '$lastplayed' 33 ? get_sample_info 33 group : var '$lastplayed' 34 ? get_sample_info 34 group : var '$lastplayed' 35 ? get_sample_info 35 group : var '$lastplayed' 36 ? get_sample_info 36 group : var '$lastplayed' 37 ? get_sample_info 37 group : var '$lastplayed' 38 ? get_sample_info 38 group : var '$lastplayed' 39 ? get_sample_info 39 group : var '$lastplayed' 40 ? get_sample_info 40 group : var '$lastplayed' 41 ? get_sample_info 41 group : var '$lastplayed' 42 ? get_sample_info 42 group : var '$lastplayed' 43 ? get_sample_info 43 group : var '$lastplayed' 44 ? get_sample_info 44 group : var '$lastplayed' 45 ? get_sample_info 45 group : var '$lastplayed' 46 ? get_sample_info 46 group : var '$lastplayed' 47 ? get_sample_info 47 group : var '$lastplayed' 48 ? get_sample_info 48 group : var '$lastplayed' 49 ? get_sample_info 49 group : var '$lastplayed' 50 ? get_sample_info 50 group : var '$lastplayed' 51 ? get_sample_info 51 group : var '$lastplayed' 52 ? get_sample_info 52 group : var '$lastplayed' 53 ? get_sample_info 53 group : var '$lastplayed' 54 ? get_sample_info 54 group : var '$lastplayed' 55 ? get_sample_info 55 group : var '$lastplayed' 56 ? get_sample_info 56 group : var '$lastplayed' 57 ? get_sample_info 57 group : var '$lastplayed' 58 ? get_sample_info 58 group : var '$lastplayed' 59 ? get_sample_info 59 group : var '$lastplayed' 60 ? get_sample_info 60 group : var '$lastplayed' 61 ? get_sample_info 61 group : var '$lastplayed' 62 ? get_sample_info 62 group : var '$lastplayed' 63 ? get_sample_info 63 group : var '$lastplayed' 64 ? get_sample_info 64 group : nothing" />
+
+	<!-- pads -->
+	<map value="PAD_01" action="set '$lastplayed' 1 &amp; var '$samplerdelete' ? sampler_pad_shift 1 : sampler_pad 1" />
+	<map value="PAD_02" action="set '$lastplayed' 2 &amp; var '$samplerdelete' ? sampler_pad_shift 2 : sampler_pad 2" />
+	<map value="PAD_03" action="set '$lastplayed' 3 &amp; var '$samplerdelete' ? sampler_pad_shift 3 : sampler_pad 3" />
+	<map value="PAD_04" action="set '$lastplayed' 4 &amp; var '$samplerdelete' ? sampler_pad_shift 4 : sampler_pad 4" />
+	<map value="PAD_05" action="set '$lastplayed' 5 &amp; var '$samplerdelete' ? sampler_pad_shift 5 : sampler_pad 5" />
+	<map value="PAD_06" action="set '$lastplayed' 6 &amp; var '$samplerdelete' ? sampler_pad_shift 6 : sampler_pad 6" />
+	<map value="PAD_07" action="set '$lastplayed' 7 &amp; var '$samplerdelete' ? sampler_pad_shift 7 : sampler_pad 7" />
+	<map value="PAD_08" action="set '$lastplayed' 8 &amp; var '$samplerdelete' ? sampler_pad_shift 8 : sampler_pad 8" />
+	<map value="PAD_09" action="set '$lastplayed' 9 &amp; var '$samplerdelete' ? sampler_pad_shift 9 : sampler_pad 9" />
+	<map value="PAD_10" action="set '$lastplayed' 10 &amp; var '$samplerdelete' ? sampler_pad_shift 10 : sampler_pad 10" />
+	<map value="PAD_11" action="set '$lastplayed' 11 &amp; var '$samplerdelete' ? sampler_pad_shift 11 : sampler_pad 11" />
+	<map value="PAD_12" action="set '$lastplayed' 12 &amp; var '$samplerdelete' ? sampler_pad_shift 12 : sampler_pad 12" />
+	<map value="PAD_13" action="set '$lastplayed' 13 &amp; var '$samplerdelete' ? sampler_pad_shift 13 : sampler_pad 13" />
+	<map value="PAD_14" action="set '$lastplayed' 14 &amp; var '$samplerdelete' ? sampler_pad_shift 14 : sampler_pad 14" />
+	<map value="PAD_15" action="set '$lastplayed' 15 &amp; var '$samplerdelete' ? sampler_pad_shift 15 : sampler_pad 15" />
+	<map value="PAD_16" action="set '$lastplayed' 16 &amp; var '$samplerdelete' ? sampler_pad_shift 16 : sampler_pad 16" />
+	<map value="PAD_17" action="set '$lastplayed' 17 &amp; var '$samplerdelete' ? sampler_pad_shift 17 : sampler_pad 17" />
+	<map value="PAD_18" action="set '$lastplayed' 18 &amp; var '$samplerdelete' ? sampler_pad_shift 18 : sampler_pad 18" />
+	<map value="PAD_19" action="set '$lastplayed' 19 &amp; var '$samplerdelete' ? sampler_pad_shift 19 : sampler_pad 19" />
+	<map value="PAD_20" action="set '$lastplayed' 20 &amp; var '$samplerdelete' ? sampler_pad_shift 20 : sampler_pad 20" />
+	<map value="PAD_21" action="set '$lastplayed' 21 &amp; var '$samplerdelete' ? sampler_pad_shift 21 : sampler_pad 21" />
+	<map value="PAD_22" action="set '$lastplayed' 22 &amp; var '$samplerdelete' ? sampler_pad_shift 22 : sampler_pad 22" />
+	<map value="PAD_23" action="set '$lastplayed' 23 &amp; var '$samplerdelete' ? sampler_pad_shift 23 : sampler_pad 23" />
+	<map value="PAD_24" action="set '$lastplayed' 24 &amp; var '$samplerdelete' ? sampler_pad_shift 24 : sampler_pad 24" />
+	<map value="PAD_25" action="set '$lastplayed' 25 &amp; var '$samplerdelete' ? sampler_pad_shift 25 : sampler_pad 25" />
+	<map value="PAD_26" action="set '$lastplayed' 26 &amp; var '$samplerdelete' ? sampler_pad_shift 26 : sampler_pad 26" />
+	<map value="PAD_27" action="set '$lastplayed' 27 &amp; var '$samplerdelete' ? sampler_pad_shift 27 : sampler_pad 27" />
+	<map value="PAD_28" action="set '$lastplayed' 28 &amp; var '$samplerdelete' ? sampler_pad_shift 28 : sampler_pad 28" />
+	<map value="PAD_29" action="set '$lastplayed' 29 &amp; var '$samplerdelete' ? sampler_pad_shift 29 : sampler_pad 29" />
+	<map value="PAD_30" action="set '$lastplayed' 30 &amp; var '$samplerdelete' ? sampler_pad_shift 30 : sampler_pad 30" />
+	<map value="PAD_31" action="set '$lastplayed' 31 &amp; var '$samplerdelete' ? sampler_pad_shift 31 : sampler_pad 31" />
+	<map value="PAD_32" action="set '$lastplayed' 32 &amp; var '$samplerdelete' ? sampler_pad_shift 32 : sampler_pad 32" />
+	<map value="PAD_33" action="set '$lastplayed' 33 &amp; var '$samplerdelete' ? sampler_pad_shift 33 : sampler_pad 33" />
+	<map value="PAD_34" action="set '$lastplayed' 34 &amp; var '$samplerdelete' ? sampler_pad_shift 34 : sampler_pad 34" />
+	<map value="PAD_35" action="set '$lastplayed' 35 &amp; var '$samplerdelete' ? sampler_pad_shift 35 : sampler_pad 35" />
+	<map value="PAD_36" action="set '$lastplayed' 36 &amp; var '$samplerdelete' ? sampler_pad_shift 36 : sampler_pad 36" />
+	<map value="PAD_37" action="set '$lastplayed' 37 &amp; var '$samplerdelete' ? sampler_pad_shift 37 : sampler_pad 37" />
+	<map value="PAD_38" action="set '$lastplayed' 38 &amp; var '$samplerdelete' ? sampler_pad_shift 38 : sampler_pad 38" />
+	<map value="PAD_39" action="set '$lastplayed' 39 &amp; var '$samplerdelete' ? sampler_pad_shift 39 : sampler_pad 39" />
+	<map value="PAD_40" action="set '$lastplayed' 40 &amp; var '$samplerdelete' ? sampler_pad_shift 40 : sampler_pad 40" />
+	<map value="PAD_41" action="set '$lastplayed' 41 &amp; var '$samplerdelete' ? sampler_pad_shift 41 : sampler_pad 41" />
+	<map value="PAD_42" action="set '$lastplayed' 42 &amp; var '$samplerdelete' ? sampler_pad_shift 42 : sampler_pad 42" />
+	<map value="PAD_43" action="set '$lastplayed' 43 &amp; var '$samplerdelete' ? sampler_pad_shift 43 : sampler_pad 43" />
+	<map value="PAD_44" action="set '$lastplayed' 44 &amp; var '$samplerdelete' ? sampler_pad_shift 44 : sampler_pad 44" />
+	<map value="PAD_45" action="set '$lastplayed' 45 &amp; var '$samplerdelete' ? sampler_pad_shift 45 : sampler_pad 45" />
+	<map value="PAD_46" action="set '$lastplayed' 46 &amp; var '$samplerdelete' ? sampler_pad_shift 46 : sampler_pad 46" />
+	<map value="PAD_47" action="set '$lastplayed' 47 &amp; var '$samplerdelete' ? sampler_pad_shift 47 : sampler_pad 47" />
+	<map value="PAD_48" action="set '$lastplayed' 48 &amp; var '$samplerdelete' ? sampler_pad_shift 48 : sampler_pad 48" />
+	<map value="PAD_49" action="set '$lastplayed' 49 &amp; var '$samplerdelete' ? sampler_pad_shift 49 : sampler_pad 49" />
+	<map value="PAD_50" action="set '$lastplayed' 50 &amp; var '$samplerdelete' ? sampler_pad_shift 50 : sampler_pad 50" />
+	<map value="PAD_51" action="set '$lastplayed' 51 &amp; var '$samplerdelete' ? sampler_pad_shift 51 : sampler_pad 51" />
+	<map value="PAD_52" action="set '$lastplayed' 52 &amp; var '$samplerdelete' ? sampler_pad_shift 52 : sampler_pad 52" />
+	<map value="PAD_53" action="set '$lastplayed' 53 &amp; var '$samplerdelete' ? sampler_pad_shift 53 : sampler_pad 53" />
+	<map value="PAD_54" action="set '$lastplayed' 54 &amp; var '$samplerdelete' ? sampler_pad_shift 54 : sampler_pad 54" />
+	<map value="PAD_55" action="set '$lastplayed' 55 &amp; var '$samplerdelete' ? sampler_pad_shift 55 : sampler_pad 55" />
+	<map value="PAD_56" action="set '$lastplayed' 56 &amp; var '$samplerdelete' ? sampler_pad_shift 56 : sampler_pad 56" />
+	<map value="PAD_57" action="set '$lastplayed' 57 &amp; var '$samplerdelete' ? sampler_pad_shift 57 : sampler_pad 57" />
+	<map value="PAD_58" action="set '$lastplayed' 58 &amp; var '$samplerdelete' ? sampler_pad_shift 58 : sampler_pad 58" />
+	<map value="PAD_59" action="set '$lastplayed' 59 &amp; var '$samplerdelete' ? sampler_pad_shift 59 : sampler_pad 59" />
+	<map value="PAD_60" action="set '$lastplayed' 60 &amp; var '$samplerdelete' ? sampler_pad_shift 60 : sampler_pad 60" />
+	<map value="PAD_61" action="set '$lastplayed' 61 &amp; var '$samplerdelete' ? sampler_pad_shift 61 : sampler_pad 61" />
+	<map value="PAD_62" action="set '$lastplayed' 62 &amp; var '$samplerdelete' ? sampler_pad_shift 62 : sampler_pad 62" />
+	<map value="PAD_63" action="set '$lastplayed' 63 &amp; var '$samplerdelete' ? sampler_pad_shift 63 : sampler_pad 63" />
+	<map value="PAD_64" action="set '$lastplayed' 64 &amp; var '$samplerdelete' ? sampler_pad_shift 64 : sampler_pad 64" />
+
+	
+	
+	<map value="LED_PAD_01" action="sampler_loaded 1 ? sampler_play 1 ? blink 500ms ? sampler_color 1 : color &apos;black&apos; : sampler_color 1 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_02" action="sampler_loaded 2 ? sampler_play 2 ? blink 500ms ? sampler_color 2 : color &apos;black&apos; : sampler_color 2 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_03" action="sampler_loaded 3 ? sampler_play 3 ? blink 500ms ? sampler_color 3 : color &apos;black&apos; : sampler_color 3 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_04" action="sampler_loaded 4 ? sampler_play 4 ? blink 500ms ? sampler_color 4 : color &apos;black&apos; : sampler_color 4 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_05" action="sampler_loaded 5 ? sampler_play 5 ? blink 500ms ? sampler_color 5 : color &apos;black&apos; : sampler_color 5 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_06" action="sampler_loaded 6 ? sampler_play 6 ? blink 500ms ? sampler_color 6 : color &apos;black&apos; : sampler_color 6 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_07" action="sampler_loaded 7 ? sampler_play 7 ? blink 500ms ? sampler_color 7 : color &apos;black&apos; : sampler_color 7 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_08" action="sampler_loaded 8 ? sampler_play 8 ? blink 500ms ? sampler_color 8 : color &apos;black&apos; : sampler_color 8 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_09" action="sampler_loaded 9 ? sampler_play 9 ? blink 500ms ? sampler_color 9 : color &apos;black&apos; : sampler_color 9 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_10" action="sampler_loaded 10 ? sampler_play 10 ? blink 500ms ? sampler_color 10 : color &apos;black&apos; : sampler_color 10 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_11" action="sampler_loaded 11 ? sampler_play 11 ? blink 500ms ? sampler_color 11 : color &apos;black&apos; : sampler_color 11 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_12" action="sampler_loaded 12 ? sampler_play 12 ? blink 500ms ? sampler_color 12 : color &apos;black&apos; : sampler_color 12 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_13" action="sampler_loaded 13 ? sampler_play 13 ? blink 500ms ? sampler_color 13 : color &apos;black&apos; : sampler_color 13 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_14" action="sampler_loaded 14 ? sampler_play 14 ? blink 500ms ? sampler_color 14 : color &apos;black&apos; : sampler_color 14 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_15" action="sampler_loaded 15 ? sampler_play 15 ? blink 500ms ? sampler_color 15 : color &apos;black&apos; : sampler_color 15 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_16" action="sampler_loaded 16 ? sampler_play 16 ? blink 500ms ? sampler_color 16 : color &apos;black&apos; : sampler_color 16 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_17" action="sampler_loaded 17 ? sampler_play 17 ? blink 500ms ? sampler_color 17 : color &apos;black&apos; : sampler_color 17 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_18" action="sampler_loaded 18 ? sampler_play 18 ? blink 500ms ? sampler_color 18 : color &apos;black&apos; : sampler_color 18 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_19" action="sampler_loaded 19 ? sampler_play 19 ? blink 500ms ? sampler_color 19 : color &apos;black&apos; : sampler_color 19 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_20" action="sampler_loaded 20 ? sampler_play 20 ? blink 500ms ? sampler_color 20 : color &apos;black&apos; : sampler_color 20 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_21" action="sampler_loaded 21 ? sampler_play 21 ? blink 500ms ? sampler_color 21 : color &apos;black&apos; : sampler_color 21 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_22" action="sampler_loaded 22 ? sampler_play 22 ? blink 500ms ? sampler_color 22 : color &apos;black&apos; : sampler_color 22 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_23" action="sampler_loaded 23 ? sampler_play 23 ? blink 500ms ? sampler_color 23 : color &apos;black&apos; : sampler_color 23 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_24" action="sampler_loaded 24 ? sampler_play 24 ? blink 500ms ? sampler_color 24 : color &apos;black&apos; : sampler_color 24 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_25" action="sampler_loaded 25 ? sampler_play 25 ? blink 500ms ? sampler_color 25 : color &apos;black&apos; : sampler_color 25 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_26" action="sampler_loaded 26 ? sampler_play 26 ? blink 500ms ? sampler_color 26 : color &apos;black&apos; : sampler_color 26 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_27" action="sampler_loaded 27 ? sampler_play 27 ? blink 500ms ? sampler_color 27 : color &apos;black&apos; : sampler_color 27 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_28" action="sampler_loaded 28 ? sampler_play 28 ? blink 500ms ? sampler_color 28 : color &apos;black&apos; : sampler_color 28 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_29" action="sampler_loaded 29 ? sampler_play 29 ? blink 500ms ? sampler_color 29 : color &apos;black&apos; : sampler_color 29 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_30" action="sampler_loaded 30 ? sampler_play 30 ? blink 500ms ? sampler_color 30 : color &apos;black&apos; : sampler_color 30 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_31" action="sampler_loaded 31 ? sampler_play 31 ? blink 500ms ? sampler_color 31 : color &apos;black&apos; : sampler_color 31 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_32" action="sampler_loaded 32 ? sampler_play 32 ? blink 500ms ? sampler_color 32 : color &apos;black&apos; : sampler_color 32 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_33" action="sampler_loaded 33 ? sampler_play 33 ? blink 500ms ? sampler_color 33 : color &apos;black&apos; : sampler_color 33 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_34" action="sampler_loaded 34 ? sampler_play 34 ? blink 500ms ? sampler_color 34 : color &apos;black&apos; : sampler_color 34 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_35" action="sampler_loaded 35 ? sampler_play 35 ? blink 500ms ? sampler_color 35 : color &apos;black&apos; : sampler_color 35 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_36" action="sampler_loaded 36 ? sampler_play 36 ? blink 500ms ? sampler_color 36 : color &apos;black&apos; : sampler_color 36 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_37" action="sampler_loaded 37 ? sampler_play 37 ? blink 500ms ? sampler_color 37 : color &apos;black&apos; : sampler_color 37 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_38" action="sampler_loaded 38 ? sampler_play 38 ? blink 500ms ? sampler_color 38 : color &apos;black&apos; : sampler_color 38 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_39" action="sampler_loaded 39 ? sampler_play 39 ? blink 500ms ? sampler_color 39 : color &apos;black&apos; : sampler_color 39 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_40" action="sampler_loaded 40 ? sampler_play 40 ? blink 500ms ? sampler_color 40 : color &apos;black&apos; : sampler_color 40 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_41" action="sampler_loaded 41 ? sampler_play 41 ? blink 500ms ? sampler_color 41 : color &apos;black&apos; : sampler_color 41 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_42" action="sampler_loaded 42 ? sampler_play 42 ? blink 500ms ? sampler_color 42 : color &apos;black&apos; : sampler_color 42 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_43" action="sampler_loaded 43 ? sampler_play 43 ? blink 500ms ? sampler_color 43 : color &apos;black&apos; : sampler_color 43 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_44" action="sampler_loaded 44 ? sampler_play 44 ? blink 500ms ? sampler_color 44 : color &apos;black&apos; : sampler_color 44 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_45" action="sampler_loaded 45 ? sampler_play 45 ? blink 500ms ? sampler_color 45 : color &apos;black&apos; : sampler_color 45 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_46" action="sampler_loaded 46 ? sampler_play 46 ? blink 500ms ? sampler_color 46 : color &apos;black&apos; : sampler_color 46 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_47" action="sampler_loaded 47 ? sampler_play 47 ? blink 500ms ? sampler_color 47 : color &apos;black&apos; : sampler_color 47 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_48" action="sampler_loaded 48 ? sampler_play 48 ? blink 500ms ? sampler_color 48 : color &apos;black&apos; : sampler_color 48 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_49" action="sampler_loaded 49 ? sampler_play 49 ? blink 500ms ? sampler_color 49 : color &apos;black&apos; : sampler_color 49 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_50" action="sampler_loaded 50 ? sampler_play 50 ? blink 500ms ? sampler_color 50 : color &apos;black&apos; : sampler_color 50 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_51" action="sampler_loaded 51 ? sampler_play 51 ? blink 500ms ? sampler_color 51 : color &apos;black&apos; : sampler_color 51 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_52" action="sampler_loaded 52 ? sampler_play 52 ? blink 500ms ? sampler_color 52 : color &apos;black&apos; : sampler_color 52 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_53" action="sampler_loaded 53 ? sampler_play 53 ? blink 500ms ? sampler_color 53 : color &apos;black&apos; : sampler_color 53 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_54" action="sampler_loaded 54 ? sampler_play 54 ? blink 500ms ? sampler_color 54 : color &apos;black&apos; : sampler_color 54 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_55" action="sampler_loaded 55 ? sampler_play 55 ? blink 500ms ? sampler_color 55 : color &apos;black&apos; : sampler_color 55 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_56" action="sampler_loaded 56 ? sampler_play 56 ? blink 500ms ? sampler_color 56 : color &apos;black&apos; : sampler_color 56 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_57" action="sampler_loaded 57 ? sampler_play 57 ? blink 500ms ? sampler_color 57 : color &apos;black&apos; : sampler_color 57 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_58" action="sampler_loaded 58 ? sampler_play 58 ? blink 500ms ? sampler_color 58 : color &apos;black&apos; : sampler_color 58 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_59" action="sampler_loaded 59 ? sampler_play 59 ? blink 500ms ? sampler_color 59 : color &apos;black&apos; : sampler_color 59 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_60" action="sampler_loaded 60 ? sampler_play 60 ? blink 500ms ? sampler_color 60 : color &apos;black&apos; : sampler_color 60 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_61" action="sampler_loaded 61 ? sampler_play 61 ? blink 500ms ? sampler_color 61 : color &apos;black&apos; : sampler_color 61 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_62" action="sampler_loaded 62 ? sampler_play 62 ? blink 500ms ? sampler_color 62 : color &apos;black&apos; : sampler_color 62 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_63" action="sampler_loaded 63 ? sampler_play 63 ? blink 500ms ? sampler_color 63 : color &apos;black&apos; : sampler_color 63 &apos;auto&apos; : color &apos;black&apos;" />
+	<map value="LED_PAD_64" action="sampler_loaded 64 ? sampler_play 64 ? blink 500ms ? sampler_color 64 : color &apos;black&apos; : sampler_color 64 &apos;auto&apos; : color &apos;black&apos;" />
+</mapper>
