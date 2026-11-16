@@ -1,4 +1,4 @@
-# Ableton-Push-1-Virtualdj-Mapping
+# Ableton-Push-1-Virtualdj-Sampler-Mapping
 This is my custom mapping for the Push 1.
 
 Copy the files to the respective directories of Virtualdj.
