@@ -50,8 +50,10 @@ Only the lit buttons do something. :D
 
 21.- curson buttons - focus deck A or Deck B
 
+22.- encoder (the more to the left) - adjust size of the loop
 
-22.- Screen (1 row has 4 grids - 4 rows in total):
+
+23.- Screen (1 row has 4 grids - 4 rows in total):
 
   row 1, grid 1-6 - fx 1 to fx6.
 
