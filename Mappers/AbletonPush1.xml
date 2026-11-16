@@ -60,8 +60,8 @@
 	<map value="ENC_TOUCH_4" action="down ? var '$enctouchfx' 1 ? deck 4 effect_active 4 ? set '$enc_touch_fx4_temp' 0 : set '$enc_touch_fx4_temp' 1 &amp; deck 4 effect_active 4 on : nothing : var '$enc_touch_fx4_temp' 1 ? deck 4 effect_active 4 off &amp; set '$enc_touch_fx4_temp' 0 : nothing" />
 	<map value="ENC_TOUCH_5" action="down ? var '$enctouchfx' 1 ? deck 4 effect_active 5 ? set '$enc_touch_fx5_temp' 0 : set '$enc_touch_fx5_temp' 1 &amp; deck 4 effect_active 5 on : nothing : var '$enc_touch_fx5_temp' 1 ? deck 4 effect_active 5 off &amp; set '$enc_touch_fx5_temp' 0 : nothing" />
 	<map value="ENC_TOUCH_6" action="down ? var '$enctouchfx' 1 ? deck 4 effect_active 6 ? set '$enc_touch_fx6_temp' 0 : set '$enc_touch_fx6_temp' 1 &amp; deck 4 effect_active 6 on : nothing : var '$enc_touch_fx6_temp' 1 ? deck 4 effect_active 6 off &amp; set '$enc_touch_fx6_temp' 0 : nothing" />
-	<map value="ENC_TOUCH_7" action="down ? var '$enctouchfx' 1 ? effect_active sampler 1 ? set '$enc_touch_fx7_temp' 0 : set '$enc_touch_fx7_temp' 1 &amp; effect_active sampler 1 on : nothing : var '$enc_touch_fx7_temp' 1 ? effect_active sampler 1 off &amp; set '$enc_touch_fx7_temp' 0 : nothing" />
-
+	<!--map value="ENC_TOUCH_7" action="down ? var '$enctouchfx' 1 ? effect_active sampler 1 ? set '$enc_touch_fx7_temp' 0 : set '$enc_touch_fx7_temp' 1 &amp; effect_active sampler 1 on : nothing : var '$enc_touch_fx7_temp' 1 ? effect_active sampler 1 off &amp; set '$enc_touch_fx7_temp' 0 : nothing" /-->
+	<map value="ENC_TOUCH_7" action="down ? var '$enctouchfx' 1 ? effect_active sampler ? set '$enc_touch_fx7_temp' 0 : set '$enc_touch_fx7_temp' 1 &amp; effect_active sampler on : nothing : var '$enc_touch_fx7_temp' 1 ? effect_active sampler off &amp; set '$enc_touch_fx7_temp' 0 : nothing" />
 
 
 
