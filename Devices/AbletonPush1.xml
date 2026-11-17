@@ -45,6 +45,9 @@
 
 		<!-- lit master -->
 		<init sendsysex="B01C01"/>
+
+		<!-- lit sampler show -->
+		<init sendsysex="B06E01"/>		
 		
 
 
@@ -61,8 +64,6 @@
 		
 <!-- fx change shift button effect -->
 <button cc="0x34" value="0x7F" off="0x00" name="FX_ADD_EFFECT" channel="0"/>	
-		
-		
 		
 <!--record arm (lock) -->
 <button cc="0x56" value="0x7F" off="0x00" name="SAMPLER_RECORD_ARM" channel="0"/>
@@ -249,7 +250,6 @@
 
 	
 	<button cc="0x70" name="TRACK" channel="0"/>
-    <button cc="0x6E" name="DEVICE" channel="0"/>
 	
 <!-- <text sysex="F0477F151B0012002020202020202020202020202020202020F7"
       offset="8"
@@ -456,13 +456,12 @@
 	  
 	  
 <!-- DECK4bpm  -->
-<text sysex="F0477F151800093C2020202020202020F7"
+<text sysex="F0477F151800073C202020202020F7"
       offset="8"
-      size="8"
+      size="6"
       encoding="ascii"
       name="DECK4_BPM"/>
-
-
+	  
 <!-- sampe lenght -->
 <text sysex="F0477F151B00093C2020202020202020F7"
       offset="8"
@@ -593,12 +592,16 @@
 
 <!-- encoders touch switch -->
 <button cc="0x03" value="0x7F" off="0x00" name="ENC_TOUCH_FX_TOGGLE" channel="0"/>
-
+<led cc="0x03" value="0x01" zero="0x00" name="LED_ENC_TOUCH_FX_TOGGLE" channel="0"/>
 
 <!-- Master Deck 4 -->
 <button cc="0x1C" value="0x7F" off="0x00" name="MASTER_DECK4_TOGGLE" channel="0"/>
+<led cc="0x1C" value="0x01" zero="0x00" name="LED_MASTER_DECK4_TOGGLE" channel="0"/>
 
 
+<!-- show sampler -->
+<button cc="0x6E" value="0x7F" off="0x00" name="SHOW_SAMPLER_TOGGLE" channel="0"/>
+<led cc="0x6E" value="0x01" zero="0x00" name="LED_SHOW_SAMPLER_TOGGLE" channel="0"/>
 
 
 
