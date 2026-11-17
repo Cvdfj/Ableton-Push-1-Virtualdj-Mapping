@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mapper device="AbletonPUSH1" author="Ground" version="850" date="2026-11-14">
-	<map value="DEVICE" action="deck 2 select" />
+	<!--map value="DEVICE" action="deck 2 select" /-->
 	<map value="TRACK" action="get_sample_name 1 &amp; set &apos;$sample_name&apos; &apos;`get_sample_name 1`&apos; &amp; var_list" modified="1794566711" />
 	<map value="SAMPLE_NAME" action="get_sample_name" />
  	<!--map value="SAMPLE_TITLE" action="get_text &apos;S:&apos;" /-->
@@ -14,12 +14,13 @@
 	<map value="SAMPLER_FX_PARAM2" action="get_effect_slider_text &apos;sampler&apos; 2" />
 	<map value="DECK4_PITCH_TITLE" action="get_text &apos;Pitch&apos;" />
 
+	<!-- <map value="S" action="get_text &apos;S&apos;" /> -->
+
 
 	<!-- <map value="MD4" action="get_text &apos;123&apos;" /> -->
-
 	
 	<!-- init -->
-	<map value="ONINIT" action="set '$fxslot' 1 &amp; set '$fxlock' 0 &amp; set '$fxenc_count1' 0 &amp; set '$fxenc_count2' 0 &amp; set '$fxenc_count3' 0 &amp; set '$fxenc_count4' 0 &amp; set '$fxenc_count5' 0 &amp; set '$fxenc_count6' 0 &amp; set '$fxenc_count7' 0 &amp; set '$enctouchfx' 0 &amp; set '$md4toggle' 0" />
+	<map value="ONINIT" action="set '$fxslot' 1 &amp; set '$fxlock' 0 &amp; set '$fxenc_count1' 0 &amp; set '$fxenc_count2' 0 &amp; set '$fxenc_count3' 0 &amp; set '$fxenc_count4' 0 &amp; set '$fxenc_count5' 0 &amp; set '$fxenc_count6' 0 &amp; set '$fxenc_count7' 0 &amp; set '$enctouchfx' 0 &amp; set '$md4toggle' 0 &amp; set '$samplerview' 0" />
 
 
 	<!-- shows bpm info -->
@@ -29,38 +30,27 @@
 	<map value="EFX" action="var '$enctouchfx' 1 ? get_text 'EFX' : get_text ''" />
 	
 	
-	
+	<!-- show masterdeck -->
 	<map value="MD4" action="var '$md4toggle' 1 ? get_text 'MD4' : get_text ''" />
 	
-	
-
-
-
-
-	
-
-	
-	<!-- animation -->
-		<!-- <map value="ANIM_01" action="var '$displayanim' 1 ? get_text 'ANIM_01' : get_text ''" /> -->
-
-	
-	<!-- <map value="DISPLAY_ANIMATION_TOGGLE" action="toggle '$displayanim'" /> -->
-	
-
-
-
-
-
-
 	<!-- fx enc touch enable-->
 	<map value="ENC_TOUCH_FX_TOGGLE" action="toggle '$enctouchfx'" />
+	<map value="LED_ENC_TOUCH_FX_TOGGLE" action="var '$enctouchfx' 1 ? blink 500ms : on" />	
+
+
 
 	<!-- <map value="MASTER_DECK4_TOGGLE" action="toggle '$md4toggle'" /> -->
+	<map value="MASTER_DECK4_TOGGLE" action="toggle '$md4toggle' &amp; var '$md4toggle' 1 ? deck 4 masterdeck : deck masterdeck" />
+	<map value="LED_MASTER_DECK4_TOGGLE" action="var '$md4toggle' 1 ? blink 500ms : on" />	
+
+
+
+
+	<!-- show and hide samper -->
+	<map value="SHOW_SAMPLER_TOGGLE" action="toggle '$samplerview' &amp; var '$samplerview' 1 ? show_splitpanel 'sideview' on &amp; sideview 'sampler' : show_splitpanel 'sideview' off" />
+	<map value="LED_SHOW_SAMPLER_TOGGLE" action="var '$samplerview' 1 ? blink 500ms : on" />
 	
-	<map value="MASTER_DECK4_TOGGLE" action="toggle '$md4toggle' &amp; var '$md4toggle' 1 ? deck 4 masterdeck : deck 1 masterdeck" />
-
-
-
+	
 	
 	<!--map value="ENC_TOUCH_1" action="var '$enctouchfx' 1 ? deck 4 effect_active 1 while_pressed : nothing" />
 	<map value="ENC_TOUCH_2" action="var '$enctouchfx' 1 ? deck 4 effect_active 2 while_pressed : nothing" />
