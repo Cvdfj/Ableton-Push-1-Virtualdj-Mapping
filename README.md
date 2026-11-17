@@ -14,6 +14,12 @@ Note: What i do, i press rec on Deck 4 and i loop it. This way this is the maste
 
 Only the lit buttons do something. :D
 
+- CHANGES:
+
+Added MASTER button to lock Deck 4 as Masterdeck (toggle between normal mode and Master en deck 4). 
+
+
+- MAPPING
 
 1.- enc1 - fx1 on deck4
 
