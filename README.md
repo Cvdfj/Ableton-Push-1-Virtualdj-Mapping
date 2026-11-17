@@ -17,8 +17,11 @@ Only the lit buttons do something. :D
 - CHANGES:
 
 Added MASTER button to lock Deck 4 as Masterdeck (toggle between normal mode and Master en deck 4). 
+
 Added Blinking to some buttons to indicate function.
+
 Added DEVICE Button for show/Hide sampler Panel.
+
 
 
 - MAPPING
