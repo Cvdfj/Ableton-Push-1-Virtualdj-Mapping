@@ -14,9 +14,12 @@
 	<map value="SAMPLER_FX_PARAM2" action="get_effect_slider_text &apos;sampler&apos; 2" />
 	<map value="DECK4_PITCH_TITLE" action="get_text &apos;Pitch&apos;" />
 
+
+	<!-- <map value="MD4" action="get_text &apos;123&apos;" /> -->
+
 	
 	<!-- init -->
-	<map value="ONINIT" action="set '$fxslot' 1 &amp; set '$fxlock' 0 &amp; set '$fxenc_count1' 0 &amp; set '$fxenc_count2' 0 &amp; set '$fxenc_count3' 0 &amp; set '$fxenc_count4' 0 &amp; set '$fxenc_count5' 0 &amp; set '$fxenc_count6' 0 &amp; set '$fxenc_count7' 0 &amp; set '$enctouchfx' 0 &amp; set '$displayanim' 0" />
+	<map value="ONINIT" action="set '$fxslot' 1 &amp; set '$fxlock' 0 &amp; set '$fxenc_count1' 0 &amp; set '$fxenc_count2' 0 &amp; set '$fxenc_count3' 0 &amp; set '$fxenc_count4' 0 &amp; set '$fxenc_count5' 0 &amp; set '$fxenc_count6' 0 &amp; set '$fxenc_count7' 0 &amp; set '$enctouchfx' 0 &amp; set '$md4toggle' 0" />
 
 
 	<!-- shows bpm info -->
@@ -24,6 +27,12 @@
 
 	<!-- shows EFX lock -->
 	<map value="EFX" action="var '$enctouchfx' 1 ? get_text 'EFX' : get_text ''" />
+	
+	
+	
+	<map value="MD4" action="var '$md4toggle' 1 ? get_text 'MD4' : get_text ''" />
+	
+	
 
 
 
@@ -45,6 +54,13 @@
 
 	<!-- fx enc touch enable-->
 	<map value="ENC_TOUCH_FX_TOGGLE" action="toggle '$enctouchfx'" />
+
+	<!-- <map value="MASTER_DECK4_TOGGLE" action="toggle '$md4toggle'" /> -->
+	
+	<map value="MASTER_DECK4_TOGGLE" action="toggle '$md4toggle' &amp; var '$md4toggle' 1 ? deck 4 masterdeck : deck 1 masterdeck" />
+
+
+
 	
 	<!--map value="ENC_TOUCH_1" action="var '$enctouchfx' 1 ? deck 4 effect_active 1 while_pressed : nothing" />
 	<map value="ENC_TOUCH_2" action="var '$enctouchfx' 1 ? deck 4 effect_active 2 while_pressed : nothing" />
