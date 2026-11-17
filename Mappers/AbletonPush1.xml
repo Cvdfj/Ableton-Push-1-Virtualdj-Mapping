@@ -222,6 +222,82 @@
 	<map value="SAMPLE_GROUP" action="var '$lastplayed' 1 ? get_sample_info 1 group : var '$lastplayed' 2 ? get_sample_info 2 group : var '$lastplayed' 3 ? get_sample_info 3 group : var '$lastplayed' 4 ? get_sample_info 4 group : var '$lastplayed' 5 ? get_sample_info 5 group : var '$lastplayed' 6 ? get_sample_info 6 group : var '$lastplayed' 7 ? get_sample_info 7 group : var '$lastplayed' 8 ? get_sample_info 8 group : var '$lastplayed' 9 ? get_sample_info 9 group : var '$lastplayed' 10 ? get_sample_info 10 group : var '$lastplayed' 11 ? get_sample_info 11 group : var '$lastplayed' 12 ? get_sample_info 12 group : var '$lastplayed' 13 ? get_sample_info 13 group : var '$lastplayed' 14 ? get_sample_info 14 group : var '$lastplayed' 15 ? get_sample_info 15 group : var '$lastplayed' 16 ? get_sample_info 16 group : var '$lastplayed' 17 ? get_sample_info 17 group : var '$lastplayed' 18 ? get_sample_info 18 group : var '$lastplayed' 19 ? get_sample_info 19 group : var '$lastplayed' 20 ? get_sample_info 20 group : var '$lastplayed' 21 ? get_sample_info 21 group : var '$lastplayed' 22 ? get_sample_info 22 group : var '$lastplayed' 23 ? get_sample_info 23 group : var '$lastplayed' 24 ? get_sample_info 24 group : var '$lastplayed' 25 ? get_sample_info 25 group : var '$lastplayed' 26 ? get_sample_info 26 group : var '$lastplayed' 27 ? get_sample_info 27 group : var '$lastplayed' 28 ? get_sample_info 28 group : var '$lastplayed' 29 ? get_sample_info 29 group : var '$lastplayed' 30 ? get_sample_info 30 group : var '$lastplayed' 31 ? get_sample_info 31 group : var '$lastplayed' 32 ? get_sample_info 32 group : var '$lastplayed' 33 ? get_sample_info 33 group : var '$lastplayed' 34 ? get_sample_info 34 group : var '$lastplayed' 35 ? get_sample_info 35 group : var '$lastplayed' 36 ? get_sample_info 36 group : var '$lastplayed' 37 ? get_sample_info 37 group : var '$lastplayed' 38 ? get_sample_info 38 group : var '$lastplayed' 39 ? get_sample_info 39 group : var '$lastplayed' 40 ? get_sample_info 40 group : var '$lastplayed' 41 ? get_sample_info 41 group : var '$lastplayed' 42 ? get_sample_info 42 group : var '$lastplayed' 43 ? get_sample_info 43 group : var '$lastplayed' 44 ? get_sample_info 44 group : var '$lastplayed' 45 ? get_sample_info 45 group : var '$lastplayed' 46 ? get_sample_info 46 group : var '$lastplayed' 47 ? get_sample_info 47 group : var '$lastplayed' 48 ? get_sample_info 48 group : var '$lastplayed' 49 ? get_sample_info 49 group : var '$lastplayed' 50 ? get_sample_info 50 group : var '$lastplayed' 51 ? get_sample_info 51 group : var '$lastplayed' 52 ? get_sample_info 52 group : var '$lastplayed' 53 ? get_sample_info 53 group : var '$lastplayed' 54 ? get_sample_info 54 group : var '$lastplayed' 55 ? get_sample_info 55 group : var '$lastplayed' 56 ? get_sample_info 56 group : var '$lastplayed' 57 ? get_sample_info 57 group : var '$lastplayed' 58 ? get_sample_info 58 group : var '$lastplayed' 59 ? get_sample_info 59 group : var '$lastplayed' 60 ? get_sample_info 60 group : var '$lastplayed' 61 ? get_sample_info 61 group : var '$lastplayed' 62 ? get_sample_info 62 group : var '$lastplayed' 63 ? get_sample_info 63 group : var '$lastplayed' 64 ? get_sample_info 64 group : nothing" />
 
 	<!-- pads -->
+	
+		
+	<map value="PAD_01" action="var '$shiftkey' 1 ? sampler_edit 1 : set '$lastplayed' 1 &amp; var '$samplerdelete' ? sampler_pad_shift 1 : sampler_pad 1" />
+	<map value="PAD_02" action="var '$shiftkey' 1 ? sampler_edit 2 : set '$lastplayed' 2 &amp; var '$samplerdelete' ? sampler_pad_shift 2 : sampler_pad 2" />
+	<map value="PAD_03" action="var '$shiftkey' 1 ? sampler_edit 3 : set '$lastplayed' 3 &amp; var '$samplerdelete' ? sampler_pad_shift 3 : sampler_pad 3" />
+	<map value="PAD_04" action="var '$shiftkey' 1 ? sampler_edit 4 : set '$lastplayed' 4 &amp; var '$samplerdelete' ? sampler_pad_shift 4 : sampler_pad 4" />
+	<map value="PAD_05" action="var '$shiftkey' 1 ? sampler_edit 5 : set '$lastplayed' 5 &amp; var '$samplerdelete' ? sampler_pad_shift 5 : sampler_pad 5" />
+	<map value="PAD_06" action="var '$shiftkey' 1 ? sampler_edit 6 : set '$lastplayed' 6 &amp; var '$samplerdelete' ? sampler_pad_shift 6 : sampler_pad 6" />
+	<map value="PAD_07" action="var '$shiftkey' 1 ? sampler_edit 7 : set '$lastplayed' 7 &amp; var '$samplerdelete' ? sampler_pad_shift 7 : sampler_pad 7" />
+	<map value="PAD_08" action="var '$shiftkey' 1 ? sampler_edit 8 : set '$lastplayed' 8 &amp; var '$samplerdelete' ? sampler_pad_shift 8 : sampler_pad 8" />
+
+	<map value="PAD_09" action="var '$shiftkey' 1 ? sampler_edit 9 : set '$lastplayed' 9 &amp; var '$samplerdelete' ? sampler_pad_shift 9 : sampler_pad 9" />
+	<map value="PAD_10" action="var '$shiftkey' 1 ? sampler_edit 10 : set '$lastplayed' 10 &amp; var '$samplerdelete' ? sampler_pad_shift 10 : sampler_pad 10" />
+	<map value="PAD_11" action="var '$shiftkey' 1 ? sampler_edit 11 : set '$lastplayed' 11 &amp; var '$samplerdelete' ? sampler_pad_shift 11 : sampler_pad 11" />
+	<map value="PAD_12" action="var '$shiftkey' 1 ? sampler_edit 12 : set '$lastplayed' 12 &amp; var '$samplerdelete' ? sampler_pad_shift 12 : sampler_pad 12" />
+	<map value="PAD_13" action="var '$shiftkey' 1 ? sampler_edit 13 : set '$lastplayed' 13 &amp; var '$samplerdelete' ? sampler_pad_shift 13 : sampler_pad 13" />
+	<map value="PAD_14" action="var '$shiftkey' 1 ? sampler_edit 14 : set '$lastplayed' 14 &amp; var '$samplerdelete' ? sampler_pad_shift 14 : sampler_pad 14" />
+	<map value="PAD_15" action="var '$shiftkey' 1 ? sampler_edit 15 : set '$lastplayed' 15 &amp; var '$samplerdelete' ? sampler_pad_shift 15 : sampler_pad 15" />
+	<map value="PAD_16" action="var '$shiftkey' 1 ? sampler_edit 16 : set '$lastplayed' 16 &amp; var '$samplerdelete' ? sampler_pad_shift 16 : sampler_pad 16" />
+
+	<map value="PAD_17" action="var '$shiftkey' 1 ? sampler_edit 17 : set '$lastplayed' 17 &amp; var '$samplerdelete' ? sampler_pad_shift 17 : sampler_pad 17" />
+	<map value="PAD_18" action="var '$shiftkey' 1 ? sampler_edit 18 : set '$lastplayed' 18 &amp; var '$samplerdelete' ? sampler_pad_shift 18 : sampler_pad 18" />
+	<map value="PAD_19" action="var '$shiftkey' 1 ? sampler_edit 19 : set '$lastplayed' 19 &amp; var '$samplerdelete' ? sampler_pad_shift 19 : sampler_pad 19" />
+	<map value="PAD_20" action="var '$shiftkey' 1 ? sampler_edit 20 : set '$lastplayed' 20 &amp; var '$samplerdelete' ? sampler_pad_shift 20 : sampler_pad 20" />
+	<map value="PAD_21" action="var '$shiftkey' 1 ? sampler_edit 21 : set '$lastplayed' 21 &amp; var '$samplerdelete' ? sampler_pad_shift 21 : sampler_pad 21" />
+	<map value="PAD_22" action="var '$shiftkey' 1 ? sampler_edit 22 : set '$lastplayed' 22 &amp; var '$samplerdelete' ? sampler_pad_shift 22 : sampler_pad 22" />
+	<map value="PAD_23" action="var '$shiftkey' 1 ? sampler_edit 23 : set '$lastplayed' 23 &amp; var '$samplerdelete' ? sampler_pad_shift 23 : sampler_pad 23" />
+	<map value="PAD_24" action="var '$shiftkey' 1 ? sampler_edit 24 : set '$lastplayed' 24 &amp; var '$samplerdelete' ? sampler_pad_shift 24 : sampler_pad 24" />
+
+	<map value="PAD_25" action="var '$shiftkey' 1 ? sampler_edit 25 : set '$lastplayed' 25 &amp; var '$samplerdelete' ? sampler_pad_shift 25 : sampler_pad 25" />
+	<map value="PAD_26" action="var '$shiftkey' 1 ? sampler_edit 26 : set '$lastplayed' 26 &amp; var '$samplerdelete' ? sampler_pad_shift 26 : sampler_pad 26" />
+	<map value="PAD_27" action="var '$shiftkey' 1 ? sampler_edit 27 : set '$lastplayed' 27 &amp; var '$samplerdelete' ? sampler_pad_shift 27 : sampler_pad 27" />
+	<map value="PAD_28" action="var '$shiftkey' 1 ? sampler_edit 28 : set '$lastplayed' 28 &amp; var '$samplerdelete' ? sampler_pad_shift 28 : sampler_pad 28" />
+	<map value="PAD_29" action="var '$shiftkey' 1 ? sampler_edit 29 : set '$lastplayed' 29 &amp; var '$samplerdelete' ? sampler_pad_shift 29 : sampler_pad 29" />
+	<map value="PAD_30" action="var '$shiftkey' 1 ? sampler_edit 30 : set '$lastplayed' 30 &amp; var '$samplerdelete' ? sampler_pad_shift 30 : sampler_pad 30" />
+	<map value="PAD_31" action="var '$shiftkey' 1 ? sampler_edit 31 : set '$lastplayed' 31 &amp; var '$samplerdelete' ? sampler_pad_shift 31 : sampler_pad 31" />
+	<map value="PAD_32" action="var '$shiftkey' 1 ? sampler_edit 32 : set '$lastplayed' 32 &amp; var '$samplerdelete' ? sampler_pad_shift 32 : sampler_pad 32" />
+
+	<map value="PAD_33" action="var '$shiftkey' 1 ? sampler_edit 33 : set '$lastplayed' 33 &amp; var '$samplerdelete' ? sampler_pad_shift 33 : sampler_pad 33" />
+	<map value="PAD_34" action="var '$shiftkey' 1 ? sampler_edit 34 : set '$lastplayed' 34 &amp; var '$samplerdelete' ? sampler_pad_shift 34 : sampler_pad 34" />
+	<map value="PAD_35" action="var '$shiftkey' 1 ? sampler_edit 35 : set '$lastplayed' 35 &amp; var '$samplerdelete' ? sampler_pad_shift 35 : sampler_pad 35" />
+	<map value="PAD_36" action="var '$shiftkey' 1 ? sampler_edit 36 : set '$lastplayed' 36 &amp; var '$samplerdelete' ? sampler_pad_shift 36 : sampler_pad 36" />
+	<map value="PAD_37" action="var '$shiftkey' 1 ? sampler_edit 37 : set '$lastplayed' 37 &amp; var '$samplerdelete' ? sampler_pad_shift 37 : sampler_pad 37" />
+	<map value="PAD_38" action="var '$shiftkey' 1 ? sampler_edit 38 : set '$lastplayed' 38 &amp; var '$samplerdelete' ? sampler_pad_shift 38 : sampler_pad 38" />
+	<map value="PAD_39" action="var '$shiftkey' 1 ? sampler_edit 39 : set '$lastplayed' 39 &amp; var '$samplerdelete' ? sampler_pad_shift 39 : sampler_pad 39" />
+	<map value="PAD_40" action="var '$shiftkey' 1 ? sampler_edit 40 : set '$lastplayed' 40 &amp; var '$samplerdelete' ? sampler_pad_shift 40 : sampler_pad 40" />
+
+	<map value="PAD_41" action="var '$shiftkey' 1 ? sampler_edit 41 : set '$lastplayed' 41 &amp; var '$samplerdelete' ? sampler_pad_shift 41 : sampler_pad 41" />
+	<map value="PAD_42" action="var '$shiftkey' 1 ? sampler_edit 42 : set '$lastplayed' 42 &amp; var '$samplerdelete' ? sampler_pad_shift 42 : sampler_pad 42" />
+	<map value="PAD_43" action="var '$shiftkey' 1 ? sampler_edit 43 : set '$lastplayed' 43 &amp; var '$samplerdelete' ? sampler_pad_shift 43 : sampler_pad 43" />
+	<map value="PAD_44" action="var '$shiftkey' 1 ? sampler_edit 44 : set '$lastplayed' 44 &amp; var '$samplerdelete' ? sampler_pad_shift 44 : sampler_pad 44" />
+	<map value="PAD_45" action="var '$shiftkey' 1 ? sampler_edit 45 : set '$lastplayed' 45 &amp; var '$samplerdelete' ? sampler_pad_shift 45 : sampler_pad 45" />
+	<map value="PAD_46" action="var '$shiftkey' 1 ? sampler_edit 46 : set '$lastplayed' 46 &amp; var '$samplerdelete' ? sampler_pad_shift 46 : sampler_pad 46" />
+	<map value="PAD_47" action="var '$shiftkey' 1 ? sampler_edit 47 : set '$lastplayed' 47 &amp; var '$samplerdelete' ? sampler_pad_shift 47 : sampler_pad 47" />
+	<map value="PAD_48" action="var '$shiftkey' 1 ? sampler_edit 48 : set '$lastplayed' 48 &amp; var '$samplerdelete' ? sampler_pad_shift 48 : sampler_pad 48" />
+
+	<map value="PAD_49" action="var '$shiftkey' 1 ? sampler_edit 49 : set '$lastplayed' 49 &amp; var '$samplerdelete' ? sampler_pad_shift 49 : sampler_pad 49" />
+	<map value="PAD_50" action="var '$shiftkey' 1 ? sampler_edit 50 : set '$lastplayed' 50 &amp; var '$samplerdelete' ? sampler_pad_shift 50 : sampler_pad 50" />
+	<map value="PAD_51" action="var '$shiftkey' 1 ? sampler_edit 51 : set '$lastplayed' 51 &amp; var '$samplerdelete' ? sampler_pad_shift 51 : sampler_pad 51" />
+	<map value="PAD_52" action="var '$shiftkey' 1 ? sampler_edit 52 : set '$lastplayed' 52 &amp; var '$samplerdelete' ? sampler_pad_shift 52 : sampler_pad 52" />
+	<map value="PAD_53" action="var '$shiftkey' 1 ? sampler_edit 53 : set '$lastplayed' 53 &amp; var '$samplerdelete' ? sampler_pad_shift 53 : sampler_pad 53" />
+	<map value="PAD_54" action="var '$shiftkey' 1 ? sampler_edit 54 : set '$lastplayed' 54 &amp; var '$samplerdelete' ? sampler_pad_shift 54 : sampler_pad 54" />
+	<map value="PAD_55" action="var '$shiftkey' 1 ? sampler_edit 55 : set '$lastplayed' 55 &amp; var '$samplerdelete' ? sampler_pad_shift 55 : sampler_pad 55" />
+	<map value="PAD_56" action="var '$shiftkey' 1 ? sampler_edit 56 : set '$lastplayed' 56 &amp; var '$samplerdelete' ? sampler_pad_shift 56 : sampler_pad 56" />
+
+	<map value="PAD_57" action="var '$shiftkey' 1 ? sampler_edit 57 : set '$lastplayed' 57 &amp; var '$samplerdelete' ? sampler_pad_shift 57 : sampler_pad 57" />
+	<map value="PAD_58" action="var '$shiftkey' 1 ? sampler_edit 58 : set '$lastplayed' 58 &amp; var '$samplerdelete' ? sampler_pad_shift 58 : sampler_pad 58" />
+	<map value="PAD_59" action="var '$shiftkey' 1 ? sampler_edit 59 : set '$lastplayed' 59 &amp; var '$samplerdelete' ? sampler_pad_shift 59 : sampler_pad 59" />
+	<map value="PAD_60" action="var '$shiftkey' 1 ? sampler_edit 60 : set '$lastplayed' 60 &amp; var '$samplerdelete' ? sampler_pad_shift 60 : sampler_pad 60" />
+	<map value="PAD_61" action="var '$shiftkey' 1 ? sampler_edit 61 : set '$lastplayed' 61 &amp; var '$samplerdelete' ? sampler_pad_shift 61 : sampler_pad 61" />
+	<map value="PAD_62" action="var '$shiftkey' 1 ? sampler_edit 62 : set '$lastplayed' 62 &amp; var '$samplerdelete' ? sampler_pad_shift 62 : sampler_pad 62" />
+	<map value="PAD_63" action="var '$shiftkey' 1 ? sampler_edit 63 : set '$lastplayed' 63 &amp; var '$samplerdelete' ? sampler_pad_shift 63 : sampler_pad 63" />
+	<map value="PAD_64" action="var '$shiftkey' 1 ? sampler_edit 64 : set '$lastplayed' 64 &amp; var '$samplerdelete' ? sampler_pad_shift 64 : sampler_pad 64" />
+	
+	
+<!-- 	
 	<map value="PAD_01" action="set '$lastplayed' 1 &amp; var '$samplerdelete' ? sampler_pad_shift 1 : sampler_pad 1" />
 	<map value="PAD_02" action="set '$lastplayed' 2 &amp; var '$samplerdelete' ? sampler_pad_shift 2 : sampler_pad 2" />
 	<map value="PAD_03" action="set '$lastplayed' 3 &amp; var '$samplerdelete' ? sampler_pad_shift 3 : sampler_pad 3" />
@@ -287,7 +363,7 @@
 	<map value="PAD_63" action="set '$lastplayed' 63 &amp; var '$samplerdelete' ? sampler_pad_shift 63 : sampler_pad 63" />
 	<map value="PAD_64" action="set '$lastplayed' 64 &amp; var '$samplerdelete' ? sampler_pad_shift 64 : sampler_pad 64" />
 
-	
+	 -->
 	
 	<map value="LED_PAD_01" action="sampler_loaded 1 ? sampler_play 1 ? blink 500ms ? sampler_color 1 : color &apos;black&apos; : sampler_color 1 &apos;auto&apos; : color &apos;black&apos;" />
 	<map value="LED_PAD_02" action="sampler_loaded 2 ? sampler_play 2 ? blink 500ms ? sampler_color 2 : color &apos;black&apos; : sampler_color 2 &apos;auto&apos; : color &apos;black&apos;" />
