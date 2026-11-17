@@ -65,7 +65,7 @@ Added MASTER button to lock Deck 4 as Masterdeck (toggle between normal mode and
 
 22.- encoder (the more to the left) - adjust size of the loop
 
-23.- master - toggle Master Deck 4 ON/OFF
+23.- master button - toggle Master Deck 4 ON/OFF
 
 24.- Screen (1 row has 4 grids - 4 rows in total):
 
