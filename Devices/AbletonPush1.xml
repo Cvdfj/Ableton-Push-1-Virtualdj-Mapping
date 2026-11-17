@@ -43,7 +43,9 @@
 		<!-- lit anim -->
 		<!-- <init sendsysex="B07301"/> -->
 
-
+		<!-- lit master -->
+		<init sendsysex="B01C01"/>
+		
 
 
 <!--shift key -->
@@ -498,12 +500,12 @@
       name="SAMPLER_VOLUME"/>
 	  
 	  
-<!-- animation -->
-<!-- <text sysex="F0477F151A00093C3E2D2D2D2D2D2D2DF7"
+<!-- master deck 4  -->
+<text sysex="F0477F151A000440202020F7"
       offset="8"
-      size="8"
+      size="3"
       encoding="ascii"
-      name="ANIM_01"/> -->
+      name="MD4"/>
 	  
 	  
 	  
@@ -593,8 +595,8 @@
 <button cc="0x03" value="0x7F" off="0x00" name="ENC_TOUCH_FX_TOGGLE" channel="0"/>
 
 
-<!-- animation toggle -->
-<!-- <button cc="0x73" value="0x7F" off="0x00" name="DISPLAY_ANIMATION_TOGGLE" channel="0"/> -->
+<!-- Master Deck 4 -->
+<button cc="0x1C" value="0x7F" off="0x00" name="MASTER_DECK4_TOGGLE" channel="0"/>
 
 
 
