@@ -79,7 +79,8 @@ Added DEVICE Button for show/Hide sampler Panel.
 25.- shift button + Pad - it opens the sample editor
 
 
-- Screen (1 row has 4 grids - 4 rows in total):
+
+- SCREEN INFO -> (1 row has 4 grids - 4 rows in total):
 
   row 1, grid 1-6 - fx 1 to fx6.
 
