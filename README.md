@@ -17,6 +17,8 @@ Only the lit buttons do something. :D
 - CHANGES:
 
 Added MASTER button to lock Deck 4 as Masterdeck (toggle between normal mode and Master en deck 4). 
+Added Blinking to some buttons to indicate function.
+Added DEVICE Button for show/Hide sampler Panel.
 
 
 - MAPPING
@@ -67,7 +69,9 @@ Added MASTER button to lock Deck 4 as Masterdeck (toggle between normal mode and
 
 23.- master button - toggle Master Deck 4 ON/OFF
 
-24.- Screen (1 row has 4 grids - 4 rows in total):
+24.- device button - show/hide sampler panel
+
+25.- Screen (1 row has 4 grids - 4 rows in total):
 
   row 1, grid 1-6 - fx 1 to fx6.
 
