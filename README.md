@@ -113,6 +113,7 @@ Added DEVICE Button for show/Hide sampler Panel.
 
 
 Feel free to modify it. It would be perfect if experienced mapping users could improve this map and add more functionallity to it. Feel free to fork.
+
 Cheerios.
 
 Dj Ground
