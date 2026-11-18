@@ -111,8 +111,8 @@ Added DEVICE Button for show/Hide sampler Panel.
   row 4, grid 8 - las sample bpm.
 
 
-Feel free to modify!
 
+Feel free to modify or improve it the way you wannt. It would be perfect if experienced mapping users could improve this map and add more functionallity to it. Feel free to fork.
 Cheerios.
 
 Dj Ground
