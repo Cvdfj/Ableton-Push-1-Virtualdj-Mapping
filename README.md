@@ -10,7 +10,7 @@ I recommend to enable the 6 effects on deck 4 and then you can browse it on the 
 
 Important: Not every deck effect works over the samples!
 
-Note: What i do, i let the deck 4 be the master, i press rec on Deck 4 and i loop it. This way this is the master deck and i can control the pitch of the samples with the Push and scratch over. Samples must be Pitched for this to work.
+Note: What i do, i let the deck 4 be the master, i press rec on Deck 4, stop recording, loop it and play the deck 4 (you can also load a blank mp3 and loop it). This way this is the master deck and i can control the pitch of the samples with the Push and scratch over. Samples must be Pitched for this to work.
 
 Only the lit buttons do something. :D
 
