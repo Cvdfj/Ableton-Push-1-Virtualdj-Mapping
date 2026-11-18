@@ -68,9 +68,9 @@ Added DEVICE Button for show/Hide sampler Panel.
 
 20.- small arrow buttons - change bank
 
-21.- curson buttons - focus deck A or Deck B
+21.- curson buttons - focus deck A or Deck B (so you can record from those decks into the sample slots)
 
-22.- encoder (the more to the left) - adjust size of the loop
+22.- encoder (the more to the left) - adjust size of the loop (forsetting looplenght whenrecording sample.)
 
 23.- master button - toggle Master Deck 4 ON/OFF
 
