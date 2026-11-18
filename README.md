@@ -4,7 +4,7 @@ This is my custom mapping for the Push 1.
 Copy the files to the respective directories of Virtualdj.
 Run Virtualdj.
 
-The pads control the sampler (64 full color), the sampler must be routed to Deck 4 (apply deck effects ON and Show effects ON), so you can enjoy all the effects of the deck 4 on the sampler. Expand Pad Layout to 8 columns.
+The pads control the sampler, the sampler must be routed to Deck 4 (apply deck effects ON and Show effects ON), so you can enjoy all the effects of the deck 4 on the sampler. Expand Pad Layout to 8 columns.
 
 I recommend to enable the 6 effects on deck 4 and then you can browse it on the Push or on screen. 
 
